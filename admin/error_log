@@ -1,0 +1,3 @@
+[26-Jan-2018 11:27:40 America/Chicago] Omeka fatal error: Unknown MySQL server host 'mysql.providenceathenaeum.org' (0).
+
+Confirm that the information in your db.ini file is correct.

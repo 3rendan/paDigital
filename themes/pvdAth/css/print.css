@@ -1,0 +1,91 @@
+
+.print-only {
+	display: block;
+	text-align: center;
+	width: 100%;
+	background: #000;
+	color: #fff;
+}
+.data {
+	display: inline;
+	float: right;
+	width: 60%;
+}
+.tombstone {
+	display: none;
+}
+.story {
+	font-size: 12pt;
+	line-height:1.42857143;
+	margin-top: 25px;
+	margin-left: 40px;
+}
+
+a:link:after, a:visited:after, a:hover {  
+  display: none;
+  content: "";
+  text-decoration: none;    
+}    
+.print-img {
+    page-break-after: always;
+    float: right;
+    padding-right: 40px;
+}	
+#menu { 
+	display: none; 
+}
+.noPrint { 
+    display: none; 
+ }
+.tags {
+	display: none;
+}
+
+.license {
+	float: left;
+	width: 50%
+	display: inline-block;
+}
+
+#wrapper, 
+#content { 
+	width: auto; 
+	margin: 0 5%; 
+	padding: 0; 
+	border: 0; 
+	float: none !important; 
+	color: black; 
+	background: transparent none; 
+}
+	
+div#content { 
+	margin-left: 10%; 
+	padding-top: 1em; 
+	border-top: 1px solid #930; 
+}
+	
+div#mast { 
+	margin-bottom: -8px; 
+}
+	
+div#mast img { 
+	vertical-align: bottom; 
+}
+	
+a:link, 
+a:visited { 
+	color: #520; 
+	background: transparent; 
+	font-weight: bold; 
+	text-decoration: underline; 
+}
+	
+#content a:link:after, 
+#content a:visited:after { 
+	content: " (" attr(href) ") "; 
+	font-size: 90%; 
+}
+	
+#content a[href^="/"]:after { 
+	content: " (http://www.digital.provath.org" attr(href) ") "; 
+}
