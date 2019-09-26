@@ -44,7 +44,7 @@
                 
                 <table class="category">
                     <tr>
-                        <td>TITLE</td>
+                        <td>TILE</td>
                         <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
                     </tr>
                     <?php
