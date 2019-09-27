@@ -9,7 +9,7 @@
      <h2>Art Collection</h2>
  </div> 
  
-    <div class="row"> <!-- TITLE ROW  -->
+<div class="row"> <!-- TITLE ROW  --></div>
 <div class="col-sm-1 col-md-1"></div>
         <div class="col-sm-6">
             <p class='item-title'><?php echo metadata('item', array('Dublin Core', 'Title')); ?></p>
@@ -26,7 +26,7 @@
 <!-- 2 column buffer -->
    
     
-<div class="row">
+<div class="row"></div>
  
 
 <!-- ITEM INFO TAB  --> 
@@ -44,7 +44,7 @@
                 
                 <table class="category">
                     <tr>
-                        <td>TILE</td>
+                        <td>TITLE</td>
                         <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
                     </tr>
                     <?php
@@ -228,10 +228,10 @@
 </div>
      
 <!-- IMAGE FILE  -->           
-    <div class="col-sm-4 col-md-4 print-img mobile-grave"> 
-        <?php 
-        echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
-    </div>
+<div class="col-sm-4 col-md-4 print-img mobile-grave"> 
+    <?php 
+    echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
+</div>
 
 
 <div class="row">

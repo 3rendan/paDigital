@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
-// Add your custom CSS here
+/* Add your custom CSS here
 
 /* 
 COLORS
@@ -263,13 +263,13 @@ h5 {
 }
 /* STYLES SUMMARY TAB ON ITEM PAGE */
 #Summary {
-    font-family: 'Montserrat', serif;
+    font-family: 'EB Garamond', serif;
     font-variant: normal;
     text-align: left;
     background: #eeeeee;
     border-radius: 4px;
-    font-size: 1.1em;
-    padding: 20px;
+    font-size: 1.3em;
+    padding: 1em;
     height: 400px;
     overflow: scroll;
     margin-left: 15px;
@@ -485,12 +485,12 @@ a.text-primary:hover {
 }
 .table-bordered > tbody > tr > td,
 .table-bordered > thead > tr > td,
-.table-bordered > thead > tr > th,
+/* .table-bordered > thead > tr > th,
 7 +2847,
 7 @@ .table-bordered > tfoot > tr > th,
 @@ -2846 {
     border: 1px solid #b6b6b6;
-}
+} */
 .table-bordered > tbody > tr > td,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > td,
@@ -537,7 +537,6 @@ a.text-primary:hover {
 .nav-tabs > li > a:hover {
     border-color: #eee #eee #b6b6b6;
 }
-,
 .nav-tabs > li.active > a {
     border: 1px solid #b6b6b6;
 }
@@ -645,15 +644,12 @@ a.text-primary:hover {
         color: #000;
         border-color: #C4D425;
     }
-    ,
     .pagination > .active > a {
         border-color: #C4D425;
     }
-    ,
     .pagination > .disabled > a {
         border-color: #C4D425;
     }
-    ,
     .pagination-lg > li > a {
         border: 1px solid #b6b6b6;
     }
@@ -686,7 +682,7 @@ a.text-primary:hover {
     .panel > .list-group .list-group-item,
     .panel > .table+.panel-body,
     .panel > .table-responsive+.panel-body,
-    .panel > .panel-body+.table-responsive, {
+    .panel > .panel-body+.table-responsive {
         border-top: 1px solid #b6b6b6;
     }
     .panel-group .panel-heading+.panel-collapse > .list-group,
@@ -776,3 +772,52 @@ a.text-primary:hover {
 }
 
 
+/* NEW STUFF 
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+link stuff, color scheme relevant and correct
+#content a:hover {
+    color: #C4D425;
+}
+PAGE NAVIGATION
+
+input[name=page] {
+    width: 25px;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a:focus a:hover {
+    color: #c4d425;
+    text-decoration: underline;
+}
+a[rel=next] {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+a[rel=prev] {
+    width: 25px;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.tombstone {
+    main item card with info, 
+}
+.btn-show {
+    download buttons for images that sit below item image 
+}
+.share {
+    small social boxes in row below image and .btn-show
+}
+
+
+
+
+.hanging { formatting for citations and hanging indent IMPORTANT!
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+    padding-top: 2em;
+} */
