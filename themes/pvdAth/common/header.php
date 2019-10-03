@@ -47,11 +47,11 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header class="banner" role="banner">
-        <div class="container noPrint">
+        <!-- <div class="container noPrint"> -->
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <h1 class='banner'><a href="http://digital.provath.org"><img src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
             <h2><?php echo __('Art Collection'); ?></a></h5>
-        </div>
+        <!-- </div> -->
     </header>
     <nav class="navbar" role="navigation">
         <div class="flex-container">
@@ -76,6 +76,6 @@
     <li><img src="/themes/pvdAth/images/twitter.png" alt="Twitter"/></li>
 </ul>
 </div>-->
-    <main id="content" role="main">
-      <div class="container">
-          <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+    <!-- <main id="content" role="main">
+      <div class="container"> -->
+          
