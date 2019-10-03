@@ -7,97 +7,36 @@ COLORS
    dark grey: #999999;;
    green: #C4D425;
    */
-
-/* COMMON TO ALL PAGES*/ 
+/* COMMON */
+* {
+    border: 1px solid gold;
+}
 html {
     font-family: 'Montserrat', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
-
-/* link stuff, color scheme relevant and correct */
-#content a:hover {
-    color: #C4D425;
-}
-    /* PAGE NAVIGATION */
-
-input[name=page] {
-    width: 25px;
-}
-a {
-    color: #fff;
-    text-decoration: none;
-}
-a:focus a:hover {
-    color: #c4d425;
-    text-decoration: underline;
-}
-a[rel=next] {
-    font-size: 1.5em;
-    font-weight: bolder;
-}
-a[rel=prev] {
-    width: 25px;
-    font-size: 1em;
-    font-weight: bolder;
-}
-/* HEADER */
 h1 {
-    /* centered Providence Athenæum in sans-serif */
-}
-h2 {
-    /* should be center script below title, same as .item-title */
-}
-/* NAV BAR */
-.nav-header {
-    /* should probly be sans-serif h3, same as .collection-title */
-    color: white;
-}
-    /* SEARCH BAR */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
 
-/* ITEM  SHOW PAGE */
-.item-title {
-    /* indented slightly from left edge sitting above .tombstone should probably be h2 */
 }
-.collection-title {
-    /* should probly be sans-serif h3, same as .nav-header  */
-    color: black;
+h2 { /* for subheading of header */
+    margin-bottom: 0;
+    margin-top: -10px;
+    font-size: 1.75em;
+    text-align: center;
+    padding: 0 0 1em;
+    color: #fff;
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
 }
-.tombstone {
-    /* main item card with info, summary, related resources  */
-    /* 2/3 of container row */
+.navbar {
+    background-color: #999999;
+    color: #fff;
 }
-    .item-nav-tabs {
-        /* sit above the info pane with choices for INFO, SUMMARY, RELATED RESOURCES */
-        font-family: 'Monserrat', sans-serif;
-        font-size: 1.8em;
-        text-align: center;
-        vertical-align: middle;
-    }
-    #info {
-        /* table with gray background and white border */
-
-    }
-    #summary { /* Good reading text, CLASS OR ID*/
-        font-family: EB Garamond, serif;
-        font-size: 1.3em;
-        overflow: scroll;
-        padding: 1em;
-    }
-    #resources {
-        /* hanging indent citations, weblinks */
-    }
-.show-img {
-    /* img on individual item page, hard-coded as 400x400px square now */
-    /* third of container row */
+a.navbar{
+    padding: 15px;
+    color: #fff;
 }
-
-.btn-dwnld {
-    /* download buttons for images that sit below item image  */
-}
-.share {
-    /* small social boxes in row below image and .btn-show */
-}
-#hanging /* { formatting for citations and hanging indent IMPORTANT! */
-    margin-left: 1.5em;
-    text-indent: -1.5em;
-    padding-top: 2em;
-} 

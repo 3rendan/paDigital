@@ -1,7 +1,7 @@
 <?php echo $this->form('search-form', $options['form_attributes']); ?>
     <div class="form-group">
         <?php echo $this->formText('query', $filters['query'], array('class'=>'form-control', 'placeholder'=>'SEARCH')); ?>
-        <button type="submit" class="btn btn-default">SEARCH</button><a href="http://digital.provath.org/items/search" style="font-size:.7em;">    Advanced</a>
+        <button type="submit" class="btn-green">SEARCH</button><a href="http://digital.provath.org/items/search" style="font-size:.7em;">    Advanced</a>
     </div>
     <?php if ($options['show_advanced']): ?>
         <fieldset id="advanced-form">

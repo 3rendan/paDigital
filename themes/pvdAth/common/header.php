@@ -49,34 +49,27 @@
     <header class="banner" role="banner">
         <div class="container noPrint">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <h1 class="site-title text-center"><a href="http://digital.provath.org"><img src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
-            <h3 class="text-center"><?php echo __('Art Collection'); ?></a></h5>
+            <h1 class='banner'><a href="http://digital.provath.org"><img src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
+            <h2><?php echo __('Art Collection'); ?></a></h5>
         </div>
-        
-
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse" id="primary-navigation">
-                    <?php echo public_nav_main_bootstrap(); ?>
-
-                    <form class="navbar-form navbar-right" style="color:#fff;" action="<?php echo public_url(''); ?>search">
-                        <?php echo search_form(array('show_advanced' => false)); ?>
-                    </form>
-
-
-                </div>
-            </div>
-        </nav>
     </header>
+    <nav class="navbar" role="navigation">
+        <div class="flex-container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
+                <li class="sr-only">Menu</li>
+                <li class="icon-bar"></li>
+                <li class="icon-bar"></li>
+                <li class="icon-bar"></li>
+            </button>
+            <div class="collapse navbar-collapse" id="primary-navigation">
+                <?php echo public_nav_main_bootstrap(); ?>
+                <form class="navbar-form navbar-right" action="<?php echo public_url(''); ?>search">
+                    <?php echo search_form(array('show_advanced' => false)); ?>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
 <!--<div class="navbar-fixed-side-left">
 <ul class="sidnav" id="myScrollSpy">
     <li><a href="https://facebook.com" target="_blank"><img src="/themes/pvdAth/images/fb.png" alt="Facebook"/></a></li>
