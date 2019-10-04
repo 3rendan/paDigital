@@ -8,9 +8,9 @@ COLORS
    green: #C4D425;
    */
 /* COMMON */
-* {
+/* * {
     border: 1px solid gold;
-}
+} */
 html {
     font-family: 'Montserrat', sans-serif;
     -webkit-text-size-adjust: 100%;
@@ -98,49 +98,48 @@ img {
     flex-wrap: wrap;
 }
     .tombstone {
-        display: flex;
+        /* display: flex; */
+        /* flex-direction: row; */
         height: 400px;
-        flex-wrap: wrap;
-        overflow: scroll;
+        /* flex-wrap: wrap; */
         background-color: #999999;
         border-radius: 3%;
         color: white;
         font-family: 'EB Garamond', serif;
+        /* clear: both; */
     }
-    .nav-tabs {
-        height: 20px;
-        /* padding: 10px; */
-        margin: auto;
-        border-bottom: 3px solid #fff;
-        font-size: 1.4em;
-        font-family: 'Montserrat', sans-serif;
-        margin: auto;
-    }
-    .nav-tabs a:links {
-        background: #eee;
-        color: #fff;
-        text-decoration: none;
-    }
-    .nav-pills > li.active > a, 
-    .nav-pills > li.active > a:focus, 
-    .nav-pills > li.active > a:hover  {
-        background-color: inherit;
-    }
+    #Info {
+        overflow: scroll;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;  
+    } 
+    #Resources {
+        overflow: scroll;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;  
+    } 
+    /* .tab-pane {
+        width: 100%;
+    }   */
     .category {
         font-weight: bold;
-        padding: 10px;
+        /* padding: 10px; */
         font-size: 1.25em;
         width:25%;
         border: 3px white solid;
+        text-transform: uppercase;
         /* border-radius: 8%; */
     }
     .mtdt {
         font-weight: bold;
         padding: 10px;
         font-size: 1.25em;
-            width:75%;
-            border: 2px white solid;
-            /* border-radius: 8%; */
+        width:75%;
+        border: 2px white solid;
         }
     .tags {
         flex-wrap: wrap
@@ -167,7 +166,26 @@ img {
         margin: auto;
     }
     .dwnlds {
-        margin: auto;
-        background-color: orange;
         height: 150px;
+        /* display: flex;
+        flex-wrap: wrap; */
     }
+        .btn-show {
+            background-color: #999999;
+            color: black;
+            border: .75px black solid;
+            border-radius: 5%;
+            padding: 10px;
+            margin: auto;
+            display: block;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+            
+        }
+        .hanging {
+            margin-left: 1.5em;
+            text-indent: -1.5em;
+            padding-top: 2em;
+        }
