@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
+/* Add your custom CSS here
+
+/* 
+COLORS
+   light grey: #EEEEEE;
+   dark grey: #999999;;
+   green: #C4D425;
+   */
+/* COMMON */
+* {
+    border: 1px solid gold;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+
+}
+h2 { /* for subheading of header */
+    margin-bottom: 0;
+    margin-top: -10px;
+    font-size: 1.75em;
+    text-align: center;
+    padding: 0 0 1em;
+    color: #fff;
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
+}
+.banner {
+    background: #000;
+}
+.banner > a {
+    color: white;
+    text-decoration: none;
+}
+.banner > a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.flex-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: start;
+}
+.navbar {
+    background-color: #999999;
+    color: #fff;
+    margin: 0;
+}
+.navbar > a{
+    padding: 15px;
+    color: #fff;
+}
+.btn-green {
+    background-color: #C4D425;
+     color: #fff;
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    padding-left: 25px;
+}
+h4 {
+    font-size: 1.5em;
+    padding-left: 40px;
+    font-family: 'EB Garamond', serif;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.tombstone {
+    background-color: #000;
+    height: 400px;
+    width: 65%;
+}
+.item-img {
+    width: 35%;
+    margin: auto;
+}
+.tags {
+    width: 65%;
+    padding: 15px;
+    height: 75px;
+}
+.dwnlds {
+    width: 35%;
+    margin: auto;
+    background-color: orange;
+    height: 150px;
+    align-self: flex-end;
+}
+.license {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.25em;
+    padding: 15px;
+    height: 75px;
+    width: 65%;
+    margin: auto;
+}
+.license > a {
+    text-decoration: none;
+    color: #999999;
+}

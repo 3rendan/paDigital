@@ -52,6 +52,12 @@ h2 { /* for subheading of header */
     margin: auto;
     justify-content: start;
 }
+.column {
+    display: flex;
+    width: 65%;
+    /* justify-content: start; */
+    flex-direction: column;
+}
 .navbar {
     background-color: #999999;
     color: #fff;
@@ -79,36 +85,89 @@ img {
     max-height: 100%;
     max-width: 100%;
 }
-.tombstone {
-    background-color: #000;
-    height: 400px;
-    width: 65%;
+.title-row {
+    width: 100%;
 }
-.item-img {
+.sixty-five {
+    width: 65%;
+    clear: both;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+    .tombstone {
+        display: flex;
+        height: 400px;
+        flex-wrap: wrap;
+        overflow: scroll;
+        background-color: #999999;
+        border-radius: 3%;
+        color: white;
+        font-family: 'EB Garamond', serif;
+    }
+    .nav-tabs {
+        height: 20px;
+        /* padding: 10px; */
+        margin: auto;
+        border-bottom: 3px solid #fff;
+        font-size: 1.4em;
+        font-family: 'Montserrat', sans-serif;
+        margin: auto;
+    }
+    .nav-tabs a:links {
+        background: #eee;
+        color: #fff;
+        text-decoration: none;
+    }
+    .nav-pills > li.active > a, 
+    .nav-pills > li.active > a:focus, 
+    .nav-pills > li.active > a:hover  {
+        background-color: inherit;
+    }
+    .category {
+        font-weight: bold;
+        padding: 10px;
+        font-size: 1.25em;
+        width:25%;
+        border: 3px white solid;
+        /* border-radius: 8%; */
+    }
+    .mtdt {
+        font-weight: bold;
+        padding: 10px;
+        font-size: 1.25em;
+            width:75%;
+            border: 2px white solid;
+            /* border-radius: 8%; */
+        }
+    .tags {
+        flex-wrap: wrap
+        padding: 15px;
+        height: 75px;
+    }
+    .license {
+        font-family: 'EB Garamond', serif;
+        font-size: 1.25em;
+        padding: 15px;
+        height: 75px;
+        flex-wrap: wrap
+        margin: auto;
+    }
+    .license > a {
+        text-decoration: none;
+        color: #999999;
+    }
+.thirty-five {
     width: 35%;
-    margin: auto;
+    clear: both;
 }
-.tags {
-    width: 65%;
-    padding: 15px;
-    height: 75px;
-}
-.dwnlds {
-    width: 35%;
-    margin: auto;
-    background-color: orange;
-    height: 150px;
-    align-self: flex-end;
-}
-.license {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.25em;
-    padding: 15px;
-    height: 75px;
-    width: 65%;
-    margin: auto;
-}
-.license > a {
-    text-decoration: none;
-    color: #999999;
-}
+    .item-img {
+        margin: auto;
+    }
+    .dwnlds {
+        margin: auto;
+        background-color: orange;
+        height: 150px;
+    }
