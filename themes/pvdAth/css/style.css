@@ -37,6 +37,7 @@ h2 { /* for subheading of header */
 }
 .banner {
     background: #000;
+    margin: 0;
 }
 .banner > a {
     color: white;
@@ -189,3 +190,7 @@ img {
             text-indent: -1.5em;
             padding-top: 2em;
         }
+        /* .license > a {
+            color: #000;
+            text-decoration: none;
+        } */
