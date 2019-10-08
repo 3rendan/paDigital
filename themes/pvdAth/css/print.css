@@ -1,24 +1,5 @@
-
-.print-only {
-	display: block;
-	text-align: center;
-	width: 100%;
-	background: #000;
-	color: #fff;
-}
-.data {
-	display: inline;
-	float: right;
-	width: 60%;
-}
-.tombstone {
-	display: none;
-}
-.story {
-	font-size: 12pt;
-	line-height:1.42857143;
-	margin-top: 25px;
-	margin-left: 40px;
+body {
+    background: url("http://digital.provath.org/uploads/wordmark.jpg") no-repeat top center;
 }
 
 a:link:after, a:visited:after, a:hover {  
@@ -26,10 +7,9 @@ a:link:after, a:visited:after, a:hover {
   content: "";
   text-decoration: none;    
 }    
+
 .print-img {
     page-break-after: always;
-    float: right;
-    padding-right: 40px;
 }	
 #menu { 
 	display: none; 
@@ -38,15 +18,35 @@ a:link:after, a:visited:after, a:hover {
     display: none; 
  }
 .tags {
-	display: none;
+	float: left;
+	width: 50%;
+	display: inline-block;
+	margin-top: 20px;
 }
-
+.tags:before {
+	content:"TAGS";
+}
+.tags > a {
+	text-decoration: none;
+}
 .license {
 	float: left;
-	width: 50%
+	width: 50%;
 	display: inline-block;
 }
-
+.license:before {
+	content:"TERMS OF USE";
+}
+#tombstone {
+    overflow: visible;
+}
+#Story {
+    overflow: visible;
+}
+.tags {
+	text-decoration: none;
+	text-transform: capitalize;
+}
 #wrapper, 
 #content { 
 	width: auto; 

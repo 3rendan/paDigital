@@ -25,6 +25,7 @@ $formAttributes['method'] = 'GET';
     </div>
     <div id="search-narrow-by-fields" class="field">
         <div class="two columns alpha label"><label><?php echo __('Narrow by Specific Fields'); ?></label>
+        <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
         </div>
         <div class="five columns omega inputs">
         <?php
@@ -92,7 +93,18 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
 
-
+    <div id="search-by-range" class="field">
+        <div class="two columns alpha">
+        <?php echo $this->formLabel('range', __('Search by a range of ID#s (example: 1-4, 156, 79)')); ?>
+        </div>
+        <div class="five columns omega inputs">
+        <?php
+            echo $this->formText('range', @$_GET['range'],
+                array('size' => '40')
+            );
+        ?>
+        </div>
+    </div>
 
     <div id="search-selects">
         <div class="field">
@@ -109,7 +121,42 @@ $formAttributes['method'] = 'GET';
                 );
             ?>
             </div>
-        </div>    
+        </div>
+
+        <div class="field">
+            <div class="two columns alpha">
+            <?php echo $this->formLabel('item-type-search', __('Search By Type')); ?>
+            </div>
+            <div class="five columns omega inputs">
+            <?php
+                echo $this->formSelect(
+                    'type',
+                    @$_REQUEST['type'],
+                    array('id' => 'item-type-search'),
+                    get_table_options('ItemType')
+                );
+            ?>
+            </div>
+        </div>
+
+        <?php if(is_allowed('Users', 'browse')): ?>
+        <div class="field">
+            <div class="two columns alpha">
+            <?php echo $this->formLabel('user-search', __('Search By User'));?>
+            </div>
+            <div class="five columns omega inputs">
+            <?php
+                echo $this->formSelect(
+                    'user',
+                    @$_REQUEST['user'],
+                    array('id' => 'user-search'),
+                    get_table_options('User')
+                );
+            ?>
+            </div>
+        </div>
+        <?php endif; ?>
+
         <div class="field">
             <div class="two columns alpha">
             <?php echo $this->formLabel('tag-search', __('Search By Tags')); ?>
@@ -124,10 +171,45 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
 
+    <?php if (is_allowed('Items','showNotPublic')): ?>
+    <div class="field">
+        <div class="two columns alpha">
+        <?php echo $this->formLabel('public', __('Public/Non-Public')); ?>
+        </div>
+        <div class="five columns omega inputs">
+        <?php
+            echo $this->formSelect(
+                'public',
+                @$_REQUEST['public'],
+                array(),
+                label_table_options(array(
+                    '1' => __('Only Public Items'),
+                    '0' => __('Only Non-Public Items')
+                ))
+            );
+        ?>
+        </div>
+    </div>
+    <?php endif; ?>
 
-
-
-
+    <div class="field">
+        <div class="two columns alpha">
+        <?php echo $this->formLabel('featured', __('Featured/Non-Featured')); ?>
+        </div>
+        <div class="five columns omega inputs">
+        <?php
+            echo $this->formSelect(
+                'featured',
+                @$_REQUEST['featured'],
+                array(),
+                label_table_options(array(
+                    '1' => __('Only Featured Items'),
+                    '0' => __('Only Non-Featured Items')
+                ))
+            );
+        ?>
+        </div>
+    </div>
     <?php fire_plugin_hook('admin_items_search', array('view' => $this)); ?>
     </div>
     <?php if (!isset($buttonText)) $buttonText = __('Search for items'); ?>

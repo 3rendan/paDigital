@@ -45,20 +45,12 @@
             </div>
         </div>
 
-      <div class="row social">
-            <div class="col-sm-4 col-md-4"></div>
-            <div class="col-sm-6 col-md-6">
-                <a href="https://www.facebook.com/ProvidenceAthenaeum?v=info&ref=nf%0A++++" class="col-sm-3 col-md-3" target="_blank"><img src="/themes/pvdAth/images/fb.png" alt="Facebook"/></a>
-                <a href="https://instagram.com/pvdath" class="col-sm-2 col-md-2" target="_blank"><img src="/themes/pvdAth/images/instagram.png" alt="Instagram"/></a>
-                <a href="https://twitter.com/pvdAth" class="col-sm-2 col-md-2" target="_blank"><img src="/themes/pvdAth/images/twitter.png" alt="Twitter"/></a>
-            </div>
-            <div class="col-sm-2 col-md-2"></div>
-        </div>*/      
+            
            
         </div>
         <div class="container ath-btm">
             <p class="text-center">
-                Proudly powered by <a href="http://omeka.org">Omeka</a>
+                <a href="http://providenceathenaeum.org">The Providence Athenæum</a> • Proudly powered by <a href="http://omeka.org">Omeka</a>
             </p>
         </div>
     </div>
