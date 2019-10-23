@@ -16,9 +16,9 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-body {
+/* body {
     font-family: 'Montserrat', sans-serif;
-}
+} */
 h1 {
     text-align: center;
     text-transform: uppercase;
@@ -47,26 +47,17 @@ h2 { /* for subheading of header */
     color: #fff;
     text-decoration: none;
 }
-.flex-container {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: start;
-}
-.column {
-    display: flex;
-    width: 65%;
-    /* justify-content: start; */
-    flex-direction: column;
-}
 .navbar {
     background-color: #999999;
     color: #fff;
     margin: 0;
 }
-.navbar > a{
+.navbar  a{
     padding: 15px;
     color: #fff;
+}
+.banner a {
+    color: white;
 }
 .btn-green {
     background-color: #C4D425;
@@ -82,21 +73,12 @@ h4 {
     padding-left: 40px;
     font-family: 'EB Garamond', serif;
 }
-img {
-    max-height: 100%;
-    max-width: 100%;
-}
-.title-row {
-    width: 100%;
-}
-.sixty-five {
-    width: 65%;
-    clear: both;
-}
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.item-title {
+    color: black;
+    text-transform: uppercase;
+    /* font-family: 'EB Garamond', serif; */
+    padding-top: 20px;
+    font-size: 1.5em;
 }
     .tombstone {
         /* display: flex; */
@@ -109,109 +91,27 @@ img {
         font-family: 'EB Garamond', serif;
         /* clear: both; */
     }
-    #Info {
-        overflow: scroll;
-        /* width: 100%; */
-        display: flex;
-        flex-direction: row; 
-        flex-wrap: wrap;   
-    } 
-
-    #Resources {
-        overflow: scroll;
-        /* width: 100%; */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;  
-    } 
-    #Summary {
-        overflow: scroll;
-        /* width: 100%; */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;  
-    } 
-    /* .tab-pane {
-        width: 100%;
-    }   */
-    .category {
-        font-weight: bold;
-        /* padding: 10px; */
-        font-size: 1.25em;
-        width:25%;
-        border: 3px white solid;
-        text-transform: uppercase;
-        /* border-radius: 8%; */
-    }
-    .tags {
-        flex-wrap: wrap
-        padding: 15px;
-        height: 75px;
-    }
-    .license {
-        font-family: 'EB Garamond', serif;
-        font-size: 1.25em;
-        padding: 15px;
-        height: 75px;
-        flex-wrap: wrap
-        margin: auto;
-    }
-    .license > a {
-        text-decoration: none;
-        color: #999999;
-    }
-.thirty-five {
-    width: 35%;
-    clear: both;
-}
-    .item-img {
-        margin: auto;
+    .hanging {
+        margin-left:1.5em;
+        text-indent:-1.5em;
+        padding-top: 2em;
     }
     .dwnlds {
-        height: 150px;
-        /* display: flex;
-        flex-wrap: wrap; */
+        padding: 10px;
+        margin: auto;
+        
     }
-        .btn-show {
-            background-color: #999999;
-            color: black;
-            border: .75px black solid;
-            border-radius: 5%;
-            padding: 10px;
-            margin: auto;
-            display: block;
-            margin-top: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 75%;
-            
-        }
-        .hanging {
-            margin-left: 1.5em;
-            text-indent: -1.5em;
-            padding-top: 2em;
-        }
-        .license a {
-            color: #000;
-            text-decoration: none;
-        }
-        .license a:hover {
-            color: #C4D425;
-            /* text-decoration: none; */
-        }
-    /* for styling tombstone info table */
-    .tombstone nav-link {
-        border: 1px white solid;
+    .btn-dwnld {
+        background-color: #999999;
+        color: #fff;
+        width: 80%;       
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
     }
-    .metadata {
-        background: #eeeeee;
-        font-family: 'Montserrat', serif;
-        float: left;
-        /*text-indent: .5em;*/
-        margin: .25em;
-        vertical-align: middle;
-        /* width: 100%; */
+    .tags {
+        margin-bottom: 10px;
     }
-    .metadata a:link {
-        text-decoration: underline;
+    .tag-text {
+
     }

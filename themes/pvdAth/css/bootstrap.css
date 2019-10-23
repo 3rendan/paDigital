@@ -84,7 +84,9 @@ sub {
   bottom: -.25em;
 }
 img {
-  border: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -1082,10 +1084,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: #000;
   background-color: #fff;
 }
 input,
@@ -1097,14 +1099,13 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #000;
+  color: #C4D425;
   text-decoration: none;
-  background-color: #eee;
   
 }
 a:focus {
