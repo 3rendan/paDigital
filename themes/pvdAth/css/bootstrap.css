@@ -3986,7 +3986,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 0 10px 0;
+  /* padding: 10px 0 10px 0; */
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4018,12 +4018,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  /* height: 20px; */
-  /* padding: 10px; */
+  height: 20px;
+  padding: 10px;
   /* border-bottom: 3px solid #fff; */
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: 'Montserrat', sans-serif;
-  margin: auto;
+  /* margin: auto; */
 }
 .nav-tabs a:links {
   color: #fff;
@@ -4036,41 +4036,31 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
   color: #000;
 }
-/* .nav-tabs {
-  border-bottom: 1px solid #b6b6b6;
-}
-.nav-tabs > li {
-  float: left;
-  margin-bottom: -1px;
-}
 .nav-tabs > li > a {
   margin-right: 2px;
   line-height: 1.42857143;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
-.nav-tabs > li > a:hover {
-  border-color: #eee #eee #b6b6b6;
-}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555;
+  color: #000;
   cursor: default;
-  background-color: #fff;
-  border: 1px solid #b6b6b6;
-  border-bottom-color: transparent;
-} */
+  /* background-color: #fff; */
+}
 .nav-tabs.nav-justified {
-  width: 65%;
-  border-bottom: 0;
-  float: left;
+  width: 100%;
+  /* border-bottom: 0; */
+  /* float: left; */
 }
 .nav-tabs.nav-justified > li {
+  color: white;
   float: none;
 }
 .nav-tabs.nav-justified > li > a {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  /* border: .75px white solid; */
   text-align: center;
 }
 .nav-tabs.nav-justified > .dropdown .dropdown-menu {
@@ -4325,9 +4315,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 15px;
   margin-bottom: 8px;
   background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
 }
 .navbar-toggle:focus {
   outline: 0;

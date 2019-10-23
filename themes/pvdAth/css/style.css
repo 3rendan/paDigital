@@ -8,9 +8,9 @@ COLORS
    green: #C4D425;
    */
 /* COMMON */
-* {
+/* * {
     border: 1px solid gold;
-}
+} */
 html {
     font-family: 'Montserrat', sans-serif;
     -webkit-text-size-adjust: 100%;
@@ -35,6 +35,9 @@ h2 { /* for subheading of header */
     font-style: italic;
     font-family: 'EB Garamond', serif;
 }
+h5 {
+    font-size: 1.35em;
+}
 .banner {
     background: #000;
     margin: 0;
@@ -56,6 +59,7 @@ h2 { /* for subheading of header */
     padding: 15px;
     color: #fff;
 }
+/*  */
 .banner a {
     color: white;
 }
@@ -81,15 +85,16 @@ h4 {
     font-size: 1.5em;
 }
     .tombstone {
-        /* display: flex; */
-        /* flex-direction: row; */
+        display: flex;
         height: 400px;
-        /* flex-wrap: wrap; */
-        background-color: #999999;
-        border-radius: 3%;
+        flex-wrap: wrap;
+        background-color: #b6b6b6;
+        border-radius: 10px 10px 0 0;
         color: white;
         font-family: 'EB Garamond', serif;
-        /* clear: both; */
+    }
+    .tombstone a {
+        color: white;
     }
     .hanging {
         margin-left:1.5em;
@@ -98,10 +103,11 @@ h4 {
     }
     .dwnlds {
         padding: 10px;
-        margin: auto;
+        /* margin: auto; */
         
     }
     .btn-dwnld {
+        display: block;
         background-color: #999999;
         color: #fff;
         width: 80%;       
@@ -110,8 +116,18 @@ h4 {
         border-radius: 5px;
     }
     .tags {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
-    .tag-text {
-
+    .tag-text a {
+        font-size: 1.25em;
+        padding: 5px;
     }
+    .collection {
+        padding-left: 10px;
+        font-family: 'EB Garamond', serif;
+        font-size: 1.25em;
+    }
+    .license {
+        padding: 0; /* ensure proper fit */
+    }
+    
