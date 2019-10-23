@@ -50,7 +50,7 @@
         <div class="container noPrint">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <h1 class="site-title text-center"><a href="http://digital.provath.org"><img src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
-            <h3 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h5>
+            <h2 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h2>
         </div>
 
         <nav class="navbar navbar-default" role="navigation">
