@@ -16,13 +16,13 @@
     </div>
     <div class="row">
         <!-- <div class="col-sm-7 tombstone"> -->
-            <div class="col-sm-7 tombstone container">
+            <div class="col-sm-7 container">
                 <ul class="nav nav-pills nav-justified">
                     <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
                     <li class='nav-item'><a href="#resources" data-toggle="tab" class="nav-link">RELATED RESOURCES</a></li>
                 </ul>
-                <div class="tab-content">
+                <div class="tab-content tombstone">
                     <div role="tabpane" class="tab-pane fade in active" id="info">
                         <table class="info">
                             <tr>
