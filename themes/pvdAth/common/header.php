@@ -22,7 +22,7 @@
 
     <!-- Need to add custom and third-party CSS files? Include them here -->
     <?php
-        queue_css_file('bootstrap');
+        queue_css_file('lib/bootstrap.min');
         queue_css_file('lib/font-awesome.min');
         queue_css_file('style');
         echo head_css();
@@ -34,6 +34,7 @@
         queue_js_file('globals');
         echo head_js();
     ?>
+    
     <link rel="stylesheet" type"text/css" href="http://digital.provath.org/themes/pvdAth/css/print.css" media="print">
     <link rel="shortcut icon" href="favicon.ico" />
     

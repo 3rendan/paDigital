@@ -88,10 +88,11 @@ h4 {
         display: flex;
         height: 400px;
         flex-wrap: wrap;
-        background-color: #b6b6b6;
+        background-color: #999999;
         border-radius: 10px 10px 0 0;
         color: white;
         font-family: 'EB Garamond', serif;
+        overflow: scroll;
     }
     .tombstone a {
         color: white;
@@ -127,7 +128,35 @@ h4 {
         font-family: 'EB Garamond', serif;
         font-size: 1.25em;
     }
+    .collection a {
+        text-decoration: underline;
+    }
     .license {
         padding: 0; /* ensure proper fit */
+        font-family: 'EB Garamond', serif;
+        font-size: 1.35em;
+    }
+    .license a {
+        text-decoration: underline;
+    }
+    #story {
+        padding: 20px;
+        width: 100%;
+        font-size: 1.25em;
+    }
+    #resources {
+        padding: 20px;
+        width: 100%;
+        font-size: 1.25em;
+    }
+    #info td{
+        border: 2px #ffffff solid;
+        font-family: 'Montserrat', serif;
+        /* text-indent: .75em; */
+        padding: 10px;
+        vertical-align: middle;
+    }
+    #info table {
+        margin: auto;
     }
     

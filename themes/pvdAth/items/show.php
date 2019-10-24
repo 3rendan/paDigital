@@ -15,99 +15,100 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-7 tombstone">
-            <ul class="nav-tabs nav-justified">
-                <li class="active"><a data-toggle="pill" href="#Info">INFO</a></li>
-                <li><a data-toggle="tab" href="#Story">STORY</a></li>
-                <li><a data-toggle="tab" href="#Resources" >RELATED RESOURCES</a></li>
-            </ul>
-        <div class="tab-pane fade in active" id="Info">
-                <table class="category">
-                    <tr>
-                        <td>TITLE</td>
-                        <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
-                    </tr>
-                    <?php
-                    $creator = metadata($item, array('MODS', 'Name'), array('delimiter' => '<br> '));
-                    if (strpos($creator, '<br> ') == TRUE) {     
-                        echo "<tr><td>CREATORS</td><td>$creator</td></tr>";
-                    } elseif ($creator != ''){
-                        echo "<tr><td>CREATOR</td><td>$creator</td></tr>";
-                    } else{
-                        echo "<tr><td>CREATOR</td><td>unknown</td></tr>";
-                    }           
-                    ?>
-                    <?php
-                    $date = metadata($item, array('Dublin Core', 'Date'));
-                    if ($date != '') {
-                        echo "<tr><td>DATE </td><td>$date</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
-                    if ($dimensions != '') {
-                        echo "<tr><td>DIMENSIONS </td><td>$dimensions</td></tr>";
-                    } 
-                    ?> 
-                    
-                    <?php
-                    $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
-                    if ($medium != '') {
-                        echo "<tr><td>MEDIUM </td><td>$medium</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
-                    if  ($pnote != '') {
-                        echo "<tr><td>PHYSICAL NOTE </td><td>$pnote</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
-                    if ($donor != '') {
-                        echo "<tr><td>DONOR </td><td>$donor</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $x = metadata($item, array('MODS', 'Local accession'));
-                    $y = trim($x, "PA-");
-                    $accession = substr($y, 0, -3);
-                    if (stripos($x,'9999') == FALSE) {
-                        echo "<tr><td>DATE OF ACCESSION </td><td>$accession</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $library = metadata($item, array('MODS', 'Host collection'));
-                    $location = metadata($item, array('MODS', 'Physical location (library)'));
-                    $llocation = $library . ": " . $location;
-                    if ($location != '') {
-                        echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
-                    } 
-                    ?>
-                </table>
+        <!-- <div class="col-sm-7 tombstone"> -->
+            <div class="col-sm-7 tombstone container">
+                <ul class="nav nav-pills nav-justified">
+                    <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
+                    <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
+                    <li class='nav-item'><a href="#resources" data-toggle="tab" class="nav-link">RELATED RESOURCES</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpane" class="tab-pane fade in active" id="info">
+                        <table class="info">
+                            <tr>
+                                <td>TITLE</td>
+                                <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
+                            </tr>
+                            <?php
+                            $creator = metadata($item, array('MODS', 'Name'), array('delimiter' => '<br> '));
+                            if (strpos($creator, '<br> ') == TRUE) {     
+                                echo "<tr><td>CREATORS</td><td>$creator</td></tr>";
+                            } elseif ($creator != ''){
+                                echo "<tr><td>CREATOR</td><td>$creator</td></tr>";
+                            } else{
+                                echo "<tr><td>CREATOR</td><td>unknown</td></tr>";
+                            }           
+                            ?>
+                            <?php
+                            $date = metadata($item, array('Dublin Core', 'Date'));
+                            if ($date != '') {
+                                echo "<tr><td>DATE </td><td>$date</td></tr>";
+                            } 
+                            ?>
+                            <?php
+                            $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
+                            if ($dimensions != '') {
+                                echo "<tr><td>DIMENSIONS </td><td>$dimensions</td></tr>";
+                            } 
+                            ?> 
+                            
+                            <?php
+                            $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
+                            if ($medium != '') {
+                                echo "<tr><td>MEDIUM </td><td>$medium</td></tr>";
+                            } 
+                            ?>
+                            <?php
+                            $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
+                            if  ($pnote != '') {
+                                echo "<tr><td>PHYSICAL NOTE </td><td>$pnote</td></tr>";
+                            } 
+                            ?>
+                            <?php
+                            $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
+                            if ($donor != '') {
+                                echo "<tr><td>DONOR </td><td>$donor</td></tr>";
+                            } 
+                            ?>
+                            <?php
+                            $x = metadata($item, array('MODS', 'Local accession'));
+                            $y = trim($x, "PA-");
+                            $accession = substr($y, 0, -3);
+                            if (stripos($x,'9999') == FALSE) {
+                                echo "<tr><td>DATE OF ACCESSION </td><td>$accession</td></tr>";
+                            } 
+                            ?>
+                            <?php
+                            $library = metadata($item, array('MODS', 'Host collection'));
+                            $location = metadata($item, array('MODS', 'Physical location (library)'));
+                            $llocation = $library . ": " . $location;
+                            if ($location != '') {
+                                echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
+                            } 
+                            ?>
+                        </table>
+                    </div>
+                    <div role="tabpane" class="tab-pane fade" id="story">
+                        <?php echo metadata('item', array('Dublin Core', 'Description')); ?>
+                    </div>
+                    <div role="tabpane" class="tab-pane fade" id="resources">
+                        <?php
+                        $date = metadata($item, array('Item Type Metadata', 'Resources'));
+                        if ($date != '') {
+                            echo $date;
+                        } 
+                        ?>
+                        <br>
+                        <?php
+                        $refNote = metadata('item', array('MODS', 'Citation/reference note(s)'));
+                        if ($refNote != '') {
+                            echo $refNote;
+                        }
+                        ?>                   
+                    </div>           
+                </div>
             </div>
-            <div class="tab-pane fade" id="Story">
-                <?php echo metadata('item', array('Dublin Core', 'Description')); ?>
-            </div>
-
-            <div class="tab-pane fade" id="Resources">
-                <div class="panel" style="list-style:none;">
-                    <?php
-                    $date = metadata($item, array('Item Type Metadata', 'Resources'));
-                    if ($date != '') {
-                        echo $date;
-                    } 
-                    ?>
-                    <br>
-                    <?php
-                    $refNote = metadata('item', array('MODS', 'Citation/reference note(s)'));
-                    if ($refNote != '') {
-                        echo $refNote;
-                    }
-                    ?>                    
-               </div>
-            </div>
-        </div>
+        <!-- </div> -->
         <div class="col-sm-5 item-image"> <!-- item image -->
                 <?php echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
         </div>
@@ -160,6 +161,7 @@
     <div class="row">
         
     </div>
+
   
 </div>
 <?php endif; ?>
