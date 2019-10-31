@@ -110,10 +110,28 @@
                 </div>
             </div>
         <!-- </div> -->
-        <div class="col-sm-5 img-fluid"> <!-- item image -->
-                <?php echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
+        <div class="col-sm-5">
+            <a href="#full-size" data-toggle="modal">
+            <?php echo link_to_item(
+            item_image('square_thumbnail', array(), 0, $item), 
+            array(
+                'class' => 'col-sm-5'), 
+                'show', $item); ?>
+            </a>
         </div>
-    </div>
+        <div class="modal fade" id='full-size' tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <img src="http://digital.provath.org/uploads/PA-9999-10.jpg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <div class="row sans-pad">
         <div class="row col-sm-7">
             <?php if (metadata('item', 'has tags')): ?>

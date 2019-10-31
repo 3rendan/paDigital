@@ -29,12 +29,12 @@ h2 { /* for subheading of header */
     margin-bottom: 0;
     margin-top: -10px;
     font-size: 1.75em;
-    text-align: center;
     padding: 0 0 1em;
     color: #fff;
     font-style: italic;
     font-family: 'EB Garamond', serif;
 }
+
 h5 {
     font-size: 1.35em;
 }
@@ -82,11 +82,18 @@ h4 {
     /* padding-left: 40px; */
     font-family: 'EB Garamond', serif;
 }
+/* .title-row {
+    color: #000;
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    padding-top: 30px;
+} */
 .item-title {
     color: black;
     text-transform: uppercase;
-    /* font-family: 'EB Garamond', serif; */
-    padding-top: 20px;
     font-size: 1.5em;
 }
     .tombstone {
@@ -244,9 +251,9 @@ h4 {
 }
 /* COLLECTIONS DISPLAY */
 .browse-items.cllec {
-    margin: 0;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: space-between;
 	padding: 5px;
 	width: 280px;
