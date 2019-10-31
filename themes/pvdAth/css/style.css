@@ -3,7 +3,7 @@
 
 /* 
 COLORS
-   light grey: #EEEEEE;
+   light grey: #b6b6b6b6b6b6;
    dark grey: #999999;;
    green: #C4D425;
    */
@@ -41,6 +41,7 @@ h5 {
 .banner {
     background: #000;
     margin: 0;
+    width: 100%;
 }
 .banner > a {
     color: white;
@@ -74,10 +75,11 @@ h3 {
     text-transform: uppercase;
     font-size: 1.4em;
     padding-left: 25px;
+    clear: both;
 }
 h4 {
     font-size: 1.5em;
-    padding-left: 40px;
+    /* padding-left: 40px; */
     font-family: 'EB Garamond', serif;
 }
 .item-title {
@@ -88,9 +90,9 @@ h4 {
     font-size: 1.5em;
 }
     .tombstone {
-        display: flex;
+        /* display: flex; */
         height: 370px;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         background-color: #999999;
         color: white;
         font-family: 'EB Garamond', serif;
@@ -103,7 +105,28 @@ h4 {
         border-radius: 10px 10px 0 0;
         background-color: #999999;
         border: 1px #b6b6b6 inset;
+        font-size: 1.25em;        
     }
+    .sans-pad {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .nav-link {
+        color: #fff;
+        background-color: #b6b6b6;
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+        background-color: #999999;
+        border-radius: 2px;
+    }
+    input {
+        border: .5px black solid;
+        border-radius: 2px;
+    }
+    /* .nav-link > active {
+        color: #000;
+        background-color: #b6b6b6;
+    } */
     .hanging {
         margin-left:1.5em;
         text-indent:-1.5em;
@@ -149,23 +172,31 @@ h4 {
     #story {
         padding: 25px;
         width: 100%;
-        font-size: 1.25em;
+        font-size: 1.35em;
     }
     #resources {
         padding: 25px;
         width: 100%;
-        font-size: 1.25em;
+        font-size: 1.35em;
     }
-    #info td{
-        border: 2px #ffffff inset;
-        font-family: 'Montserrat', serif;
-        /* text-indent: .75em; */
-        padding: 10px;
-        vertical-align: middle;
+    .table-striped {
+        display: block;
+        width: 90%;
+        margin: auto;
+        /* color: #000; */
+        padding-top: 20px;
+        font-size: 1em;
+        font-family: 'Montserrat', sans-serif;
     }
-    #info table {
-        margin: 30px;
-    }
+
+    /* .table-striped th {
+        padding-left: 10px;
+        padding-right: 10px;
+    } */
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #b6b6b6;
+        /* color: #000; */
+      }
 /* FOOTER */
 .ath-foot {
 	width: 100%;
@@ -196,16 +227,16 @@ h4 {
 }
 
 /* SEARCH RESULTS DISPLAY */
-.browse-items.search {
+.browse-items{
 	margin: 0;
 	padding: 5px;
 	width: 300px;
-    border-top: solid #eee .8em;
-    display: inline-block;	    
+    border-top: solid #b6b6b6 1.25em;
+    /* display: inline-block;	     */
 }
-.browse-items.search img {
+
+.browse-items img {
     width: 100%;
-    /* height: 100%; */
     display: block;
     margin-top: 0;
     padding-top: 0;
@@ -213,22 +244,36 @@ h4 {
 }
 /* COLLECTIONS DISPLAY */
 .browse-items.cllec {
-	margin: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
 	padding: 5px;
 	width: 280px;
-	height: 355px;
-	border-top: solid #eee 1.25em;
+	/* height: 355px; */
+    border-top: solid #b6b6b6 1.25em;
+    display: inline-block;
 }
 .tags {
     text-transform: uppercase;
     padding: 10px;
     font-size: 1.25em;
+    padding-bottom: 40px;
+}
+#browse-tags {
+    padding-bottom: 30px;
 }
 .tags:first-child{padding-left:0 !important;}
 .flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box;
+}
+h5 {
+    font-style:italic;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 .iconx {
     display: block;

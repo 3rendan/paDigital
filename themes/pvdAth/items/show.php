@@ -17,41 +17,41 @@
     <div class="row">
         <!-- <div class="col-sm-7 tombstone"> -->
             <div class="col-sm-7 container">
-                <ul class="nav nav-pills nav-justified">
+                <ul class="nav nav-tabs nav-justified">
                     <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
                     <li class='nav-item'><a href="#resources" data-toggle="tab" class="nav-link">RELATED RESOURCES</a></li>
                 </ul>
                 <div class="tab-content tombstone">
-                    <div role="tabpane" class="tab-pane fade in active" id="info">
-                        <table class="info">
+                    <div role="tabpane" class="tab-pane fade in active"  id='info'>
+                        <table class="table table-striped">
+                        <tbody>
                             <tr>
-                                <td>TITLE</td>
+                            <th scope="row">TITLE</th>
                                 <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
                             </tr>
                             <?php
                             $creator = metadata($item, array('MODS', 'Name'), array('delimiter' => '<br> '));
                             if (strpos($creator, '<br> ') == TRUE) {     
-                                echo "<tr><td>CREATORS</td><td>$creator</td></tr>";
+                                echo "<th scope=\"row\">CREATORS</th><td>$creator</td></tr>";
                             } elseif ($creator != ''){
-                                echo "<tr><td>CREATOR</td><td>$creator</td></tr>";
+                                echo "<tr><th scope=\"row\"\>CREATOR</th><td>$creator</td></tr>";
                             } else{
-                                echo "<tr><td>CREATOR</td><td>unknown</td></tr>";
+                                echo "<tr><th scope=\"row\">CREATOR</th><td>unknown</td></tr>";
                             }           
                             ?>
                             <?php
                             $date = metadata($item, array('Dublin Core', 'Date'));
                             if ($date != '') {
-                                echo "<tr><td>DATE </td><td>$date</td></tr>";
+                                echo "<tr><th scope=\"row\">DATE </th><td>$date</td></tr>";
                             } 
                             ?>
                             <?php
                             $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
                             if ($dimensions != '') {
-                                echo "<tr><td>DIMENSIONS </td><td>$dimensions</td></tr>";
+                                echo "<tr><th scope=\"row\">DIMENSIONS </th><td>$dimensions</td></tDIMENSIONS>";
                             } 
-                            ?> 
-                            
+                            ?>
                             <?php
                             $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
                             if ($medium != '') {
@@ -86,6 +86,7 @@
                                 echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
                             } 
                             ?>
+                            </tbody> 
                         </table>
                     </div>
                     <div role="tabpane" class="tab-pane fade" id="story">
@@ -109,11 +110,11 @@
                 </div>
             </div>
         <!-- </div> -->
-        <div class="col-sm-5 item-image"> <!-- item image -->
+        <div class="col-sm-5 img-fluid"> <!-- item image -->
                 <?php echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
         </div>
     </div>
-    <div class="row">
+    <div class="row sans-pad">
         <div class="row col-sm-7">
             <?php if (metadata('item', 'has tags')): ?>
             <div class="tags">

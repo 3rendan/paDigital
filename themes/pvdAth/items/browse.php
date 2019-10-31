@@ -9,9 +9,9 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 <!-- NAVTABS FOR BROWSE, TAGS, and SEARCH -->
 <div class="col-sm-12" style="padding-bottom:30px">
     <ul class="nav nav-tabs nav-justified">
-        <li class="active"><a data-toggle="pill" href="#all">BROWSE ALL</a></li>
-        <li><a data-toggle="pill" href="#browse-tags">BROWSE BY TAG</a></li>
-        <li><a data-toggle="pill" href="#browse-search">SEARCH ITEMS</a></li>
+        <li class="active"><a data-toggle="tab" href="#all">BROWSE ALL</a></li>
+        <li><a data-toggle="tab" href="#browse-tags">BROWSE BY TAG</a></li>
+        <li><a data-toggle="tab" href="#browse-search">SEARCH ITEMS</a></li>
     </ul>     
 </div>
 <div class="tab-content wrapper">
@@ -19,8 +19,8 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
         <div class="flex-container">
             <?php 
             foreach(loop('items') as $item) {
-                echo "<div class=\"browse-items search\">" . link_to_item(item_image('square_thumbnail'));
-                echo "<h3 style=\"font-style:italic;\">" . link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')) . "</h3></div>";
+                echo "<div class=\"browse-items\">" . link_to_item(item_image('square_thumbnail'));
+                echo "<h5>" . link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')) . "</h5></div>";
                 }
             ?>
         </div>
