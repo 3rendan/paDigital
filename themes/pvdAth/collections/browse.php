@@ -9,7 +9,7 @@
         </div>       
     </div>       
     <?php foreach (loop('collections') as $collection): ?>
-        <div class="flex-container">
+    <div class="flex-container">
                     <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
                         <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
                     <?php endif; ?>

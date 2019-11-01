@@ -97,37 +97,9 @@
     </div>
 </div>  
 <!-- part of item table -->
-<?php
-                            $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
-                            if ($medium != '') {
-                                echo "<tr><td>MEDIUM </td><td>$medium</td></tr>";
-                            } 
-                            ?>
-                            <?php
-                            $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
-                            if  ($pnote != '') {
-                                echo "<tr><td>PHYSICAL NOTE </td><td>$pnote</td></tr>";
-                            } 
-                            ?>
-                            <?php
-                            $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
-                            if ($donor != '') {
-                                echo "<tr><td>DONOR </td><td>$donor</td></tr>";
-                            } 
-                            ?>
-                            <?php
-                            $x = metadata($item, array('MODS', 'Local accession'));
-                            $y = trim($x, "PA-");
-                            $accession = substr($y, 0, -3);
-                            if (stripos($x,'9999') == FALSE) {
-                                echo "<tr><td>DATE OF ACCESSION </td><td>$accession</td></tr>";
-                            } 
-                            ?>
-                            <?php
-                            $library = metadata($item, array('MODS', 'Host collection'));
-                            $location = metadata($item, array('MODS', 'Physical location (library)'));
-                            $llocation = $library . ": " . $location;
-                            if ($location != '') {
-                                echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
-                            } 
-                            ?>
+
+
+<!-- image lightbox -->
+<div class="col-sm-5 img-fluid"> <!-- item image -->
+    <?php echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
+</div>

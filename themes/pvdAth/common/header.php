@@ -53,30 +53,25 @@
             <h1 class="site-title text-center"><a href="http://digital.provath.org"><img src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
             <h2 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h2>
         </div>
-
         <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                <div class="collapse navbar-collapse" id="primary-navigation">
-                    <?php echo public_nav_main_bootstrap(); ?>
+            <div class="collapse navbar-collapse" id="primary-navigation">
+                <?php echo public_nav_main_bootstrap(); ?>
 
-                    <form class="navbar-form navbar-right" style="color:#fff;" action="<?php echo public_url(''); ?>search">
-                        <?php echo search_form(array('show_advanced' => false)); ?>
-                    </form>
+                <form class="navbar-form navbar-right" style="color:#fff;" action="<?php echo public_url(''); ?>search">
+                    <?php echo search_form(array('show_advanced' => false)); ?>
+                </form>
 
 
-                </div>
             </div>
         </nav>
-    </header>
+</header>
 <!--<div class="navbar-fixed-side-left">
 <ul class="sidnav" id="myScrollSpy">
     <li><a href="https://facebook.com" target="_blank"><img src="/themes/pvdAth/images/fb.png" alt="Facebook"/></a></li>

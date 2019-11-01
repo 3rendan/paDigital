@@ -2,7 +2,7 @@
     $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 'Title')));
     echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show'));
 ?>
-<div class="flex-container">
+<div class="container-fluid">
     
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
