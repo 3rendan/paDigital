@@ -48,11 +48,9 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header class="banner">
-        <div class="banner">
-            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <h1 class="site-title text-center"><a href="http://digital.provath.org"><img class="img-fluid" src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
-            <h2 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h2>
-        </div>
+        <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+        <h1 class="text-center"><a href="http://digital.prov.org"><img class="img-fluid site-title" src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
+        <h2 class="text-center sstRec"><?php echo __('Digital Art Collection'); ?></a></h2>
         <nav class="navbar navbar-default" role="navigation">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
                     <span class="sr-only">Menu</span>
@@ -67,7 +65,7 @@
                 <form class="navbar-form navbar-right" style="color:#fff;" action="<?php echo public_url(''); ?>search">
                     <?php echo search_form(array('show_advanced' => false)); ?>
                 </form>
-            </div>
+
         </nav>
 </header>
 <!--<div class="navbar-fixed-side-left">

@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="title-row col-sm-11 col-sm-offset-1">
-        <p class='item-title'><?php echo metadata('item', array('Dublin Core', 'Title')); ?></p>
+        <h2 class='item-title'><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h2>
             <?php if (metadata('item', 'Collection Name')): ?>
             <div id="collection">
                 <p class="collection"><?php echo link_to_collection_for_item(); ?></p>
