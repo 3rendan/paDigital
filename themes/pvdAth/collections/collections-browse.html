@@ -6,12 +6,11 @@
                 echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));?></h3>   
             </div>
         </div>
-        <?php foreach (loop('collections') as $collection): ?>
-    <div class="flex-container">
-        <div class="row">
-            <div class="col-sm-2">
-                <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-                    <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
+        <div class="flex-container">
+            <div class="row">
+                <div class="col-sm-2">
+                <?php foreach (loop('collections') as $collection) {
+                    echo "<div class=\"browse-items\">" . link_to_collection($collectionImage, array('class' => 'image')); ?>
                 <?php endif; ?>
             </div>
         </div>

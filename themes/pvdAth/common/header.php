@@ -47,10 +47,10 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <header class="banner" role="banner">
-        <div class="container noPrint">
+    <header class="banner">
+        <div class="banner">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <h1 class="site-title text-center"><a href="http://digital.provath.org"><img src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
+            <h1 class="site-title text-center"><a href="http://digital.provath.org"><img class="img-fluid" src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
             <h2 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h2>
         </div>
         <nav class="navbar navbar-default" role="navigation">
@@ -67,8 +67,6 @@
                 <form class="navbar-form navbar-right" style="color:#fff;" action="<?php echo public_url(''); ?>search">
                     <?php echo search_form(array('show_advanced' => false)); ?>
                 </form>
-
-
             </div>
         </nav>
 </header>
@@ -79,5 +77,5 @@
 </ul>
 </div>-->
     <main id="content" role="main">
-      <div class="container">
+      
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
