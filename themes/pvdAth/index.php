@@ -4,7 +4,6 @@
 
 
 <!-- BEGIN CAROUSEL -->
-<div class="row"><br></div>
 <div id="myCarousel" class="carousel">
   <!-- Indicators -->
 
@@ -72,8 +71,8 @@
 
 <!-- END CAROUSEL -->
 <!-- ABOUT -->
-
-<div class="col-sm-offset-1 col-sm-10">
+<div class="container">
+<div class="col-sm-10">
   <div class="paragraph">
     <p>The Providence Athenæum possesses an eclectic art collection of nearly 150 art objects, which range from a delicate ivory miniature to a massive cabinet styled after an Egyptian temple. These artworks - either donated by Athenæum members or purchased by subscription - track developments in art and art collecting from the institution’s founding in 1836 to the present. Together they provide a narrative of the Athenæum’s cultural significance to Providence and the region.</p>
 
@@ -85,6 +84,7 @@
     <a href="http://provath.org" target="_blank"><img src="/uploads/athena.jpg" alt="The Providence Athenæum" style="width:150px;text-align: center;padding-top: 2em;"></a>   
     </div>
   </div>
+</div>
 </div>
 
 <!--

@@ -4,19 +4,17 @@
 ?>
 <?php echo js_tag('lightbox', 'javascripts'); ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="title-row col-sm-11 col-sm-offset-1">
+<div class="container">
+    <div class="row col-sm-11 col-sm-offset-1">
         <h2 class='item-title'><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h2>
             <?php if (metadata('item', 'Collection Name')): ?>
             <div id="collection">
                 <p class="collection"><?php echo link_to_collection_for_item(); ?></p>
             </div>
-        </div>
     </div>
-    <div class="row">
+<div class="container">
         <!-- <div class="col-sm-7 tombstone"> -->
-            <div class="col-sm-7 container">
+            <div class="col-sm-7">
                 <ul class="nav nav-tabs nav-justified">
                     <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
@@ -110,7 +108,7 @@
                 </div>
             </div>
         <!-- </div> -->
-        <div class="col-sm-5">
+        <div class="col-sm-5" style="padding-top:15px">
             <a href="#full-size" data-toggle="modal">
             <?php echo link_to_item(
             item_image('square_thumbnail', array(), 0, $item), 
@@ -132,7 +130,7 @@
             </div>
         </div>
 
-    <div class="row sans-pad">
+    <div class="row">
         <div class="row col-sm-7">
             <?php if (metadata('item', 'has tags')): ?>
             <div class="tags">
@@ -178,7 +176,10 @@
         </div>
     </div>
     <div class="row">
-        
+        <ul class="pager text-center">
+            <li class="previous"><?php echo link_to_previous_item_show(); ?></li>
+            <li class="next"><?php echo link_to_next_item_show(); ?></li>
+        </ul>       
     </div>
 
   

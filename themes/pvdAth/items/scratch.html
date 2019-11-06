@@ -1,105 +1,28 @@
-<div class="col-sm-6 col-md-6 tombstone" id="tombstone"> 
-    <ul class="nav nav-tabs nav-justified">
-        <li class="active"><a data-toggle="pill" href="#Info">INFO</a></li>
-        <li><a data-toggle="tab" href="#Story">STORY</a></li>
-        <li><a data-toggle="tab" href="#Resources" >RELATED RESOURCES</a></li>
-    </ul>
-
-    <div class="tombstone">
-        <div class="tab-content wrapper">
-            <div class="tab-pane fade in active" id="Info">
-                <table class="category">
-                    <tr>
-                        <td>TITLE</td>
-                        <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
-                    </tr>
-                    <?php
-                    $creator = metadata($item, array('MODS', 'Name'), array('delimiter' => '<br> '));
-                    if (strpos($creator, '<br> ') == TRUE) {     
-                        echo "<tr><td>CREATORS</td><td>$creator</td></tr>";
-                    } elseif ($creator != ''){
-                        echo "<tr><td>CREATOR</td><td>$creator</td></tr>";
-                    } else{
-                        echo "<tr><td>CREATOR</td><td>unknown</td></tr>";
-                    }           
-                    ?>
-                    <?php
-                    $date = metadata($item, array('Dublin Core', 'Date'));
-                    if ($date != '') {
-                        echo "<tr><td>DATE </td><td>$date</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
-                    if ($dimensions != '') {
-                        echo "<tr><td>DIMENSIONS </td><td>$dimensions</td></tr>";
-                    } 
-                    ?> 
-                    
-                    <?php
-                    $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
-                    if ($medium != '') {
-                        echo "<tr><td>MEDIUM </td><td>$medium</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
-                    if  ($pnote != '') {
-                        echo "<tr><td>PHYSICAL NOTE </td><td>$pnote</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
-                    if ($donor != '') {
-                        echo "<tr><td>DONOR </td><td>$donor</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $x = metadata($item, array('MODS', 'Local accession'));
-                    $y = trim($x, "PA-");
-                    $accession = substr($y, 0, -3);
-                    if (stripos($x,'9999') == FALSE) {
-                        echo "<tr><td>DATE OF ACCESSION </td><td>$accession</td></tr>";
-                    } 
-                    ?>
-                    <?php
-                    $library = metadata($item, array('MODS', 'Host collection'));
-                    $location = metadata($item, array('MODS', 'Physical location (library)'));
-                    $llocation = $library . ": " . $location;
-                    if ($location != '') {
-                        echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
-                    } 
-                    ?>
-                </table>
-            </div>
-            <div class="tab-pane fade" id="Story">
-                <?php echo metadata('item', array('Dublin Core', 'Description')); ?>
-            </div>
-
-            <div class="tab-pane fade" id="Resources">
-                <div class="panel" style="list-style:none;">
-                    <?php
-                    $date = metadata($item, array('Item Type Metadata', 'Resources'));
-                    if ($date != '') {
-                        echo $date;
-                    } 
-                    ?>
-                    <br>
-                    <?php
-                    $refNote = metadata('item', array('MODS', 'Citation/reference note(s)'));
-                    if ($refNote != '') {
-                        echo $refNote;
-                    }
-                    ?>                    
-               </div>
-            </div>
-        </div>
+<div class="container">
+    <div class="row art-room text-center">
+        <img src="/uploads/carousel/art-room.jpg" alt="The Art Room" />
     </div>
-</div>  
-<!-- part of item table -->
+    
+    <div class="row col-sm-10 col-sm-offset-1">
+    <div class="row">
+            <h3>About</h3>
+    </div>
+    <div class="paragraph">
+        <p>The Providence Athen&aelig;um is an independent, member-supported library and cultural center located on Providence&rsquo;s historic Benefit Street. Over its nearly 200 years of existence, the library has welcomed illustrious writers, spirited thinkers, and energetic community members through its doors to engage in reading, conversation, and debate. At its heart, the Athen&aelig;um encourages a love of reading and learning to all.</p>
+    <div class='row'>
+        <h3>The Project</h3>
+    </div> 
+        <p>This project began as a collaboration with Wheaton College to document the art collection of the Providence Athen&aelig;um in the spring of 2016. The students from an Art History senior seminar course led by Dr. R. Tripp Evans researched and cataloged 100 objects over the course of the semester, and produced scholarly essays for each item. In 2017, funding from the Herman H. Rose Civic, Cultural and Media Access Fund (formerly the ADDD Fund) allowed the Athen&aelig;um to photograph over half of these objects, and to create the current searchable database of the art collection connecting objects with descriptions.</p>
+        <p>The project staff will continue to add objects and related archival materials to the database until the collection is fully represented. </p>
+    </div>
 
+    </div>
+    <div class="row col-sm-offset-2">
+        <h2>Contact</h2>
+        <ul class="contacts">
+            <li>Brendan Ryan, Technical Services Librarian, <a href="mailto:bryan@provath.org">bryan@provath.org</a></li>
+            <li>Stephanie Ovoian, Reference &amp; Special Collections Librarian, <a href="mailto:sknott@provath.org">sovoian@provath.org</a></li>
+            <li>Kate Wodehouse , Director of Collections &amp; Library Services, <a href="mailto:kwodehouse@provath.org">kwodehouse@provath.org</a></li>
+        </ul>
+    </div>
 
-<!-- image lightbox -->
-<div class="col-sm-5 img-fluid"> <!-- item image -->
-    <?php echo item_image_gallery(array('link', array('data-lightbox'=>'lightbox'))); ?> 
-</div>

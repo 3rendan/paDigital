@@ -2,10 +2,13 @@
 $pageTitle = __('Browse items');
 echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 ?>
-<div class="row col-sm-11 col-sm-offset-1">
-    <h3><?php echo $pageTitle;?> <small><?php echo __('(%s items total)', $total_results); ?></small></h3>
-</div>
+<div class="row">
+        <div class="col-sm-offset-3">
+        <h3><?php echo $pageTitle;?> <small><?php echo __('(%s items total)', $total_results); ?></small></h3>
+        </div>  
+</div>  
 
+<div class="container">
 <!-- NAVTABS FOR BROWSE, TAGS, and SEARCH -->
 <div class="col-sm-12" style="padding-bottom:30px">
     <ul class="nav nav-tabs nav-justified">
@@ -16,7 +19,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 </div>
 <div class="tab-content wrapper">
     <div class="tab-pane fade in active" id="all">   
-        <div class="flex-container">
+        <div class="container">
             <?php 
             foreach(loop('items') as $item) {
                 echo "<div class=\"browse-items\">" . link_to_item(item_image('square_thumbnail'));
@@ -27,8 +30,8 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
     </div>
     <div class="tab-pane fade" id="browse-tags">
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
-            <?php echo "<div class=\"tags\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>   
-
+            <?php echo "<div style=\"text-transform: uppercase;font-size: 1.25em;\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>   
+            
     </div>
     <div class="tab-pane fade" id="browse-search">
         <?php echo $this->partial('items/search-form.php',
@@ -37,12 +40,13 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
             'useSidebar' => false)); 
             ?>
     </div>
-</div>
+    </!-->
 
-<div class="row pagination">
-        <?php echo pagination_links(); ?>   
-</div>
 
+    <div class="row">
+      <?php echo pagination_links(); ?></li>
+    </div>
+ 
 
 
 <div>

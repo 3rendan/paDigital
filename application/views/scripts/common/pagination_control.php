@@ -12,7 +12,7 @@ if ($this->pageCount > 1):
         </li>
         <?php endif; ?>
 
-        <li class="page-input">
+        <li>
         <form action="<?php echo html_escape($this->url()); ?>" method="get" accept-charset="utf-8">
         <?php
         $hiddenParams = array();
@@ -32,7 +32,7 @@ if ($this->pageCount > 1):
         }
 
         // Manually create this input to allow an omitted ID
-        $pageInput = '<input type="text" name="page" title="'
+        $pageInput = '<input name="page" title="'
                     . html_escape(__('Current Page'))
                     . '" value="'
                     . html_escape($this->current) . '">';

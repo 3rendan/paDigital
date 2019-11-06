@@ -2,13 +2,13 @@
     $pageTitle = __('Browse collections');
     echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
-<div class="container"> 
+
     <div class="row">
-        <div class="col-sm-11 col-sm-offset-1">
+        <div class="col-sm-offset-3">
             <h3><?php echo 'Browse all collections'; ?></h3> 
-        </div>       
-    </div>       
-    <div class="flex-container">
+        </div>  
+</div>       
+    <div class="container">
         <?php 
         foreach (loop('collections') as $collection) {
             echo "<div class=\"browse-items\">" . link_to_collection($collectionImage, 'square_thumbnail'); 

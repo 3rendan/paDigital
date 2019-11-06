@@ -674,14 +674,14 @@ header nav {
     .pagination li {
         height: 25px;
         min-width: 25px;
-        background: #e2e2e2; /* Fallback */
+        /* background: #e2e2e2; /* Fallback */
         background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#e2e2e2));
         background-image: -webkit-linear-gradient(top, #f8f8f8, #e2e2e2);
         background-image: -moz-linear-gradient(top, #f8f8f8, #e2e2e2);
         background-image: -o-linear-gradient(top, #f8f8f8, #e2e2e2);
         background-image: -ms-linear-gradient(top, #f8f8f8, #e2e2e2);
         background-image: linear-gradient(top, #f8f8f8, #e2e2e2);
-        border: 1px solid #D8D8D8;
+        border: 1px solid #D8D8D8; */
         -webkit-appearance: none;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
