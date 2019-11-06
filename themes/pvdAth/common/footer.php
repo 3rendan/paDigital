@@ -1,6 +1,6 @@
       </div>
     </main>
-    <footer class="ath-foot noPrint" role="contentinfo">
+    <footer class="ath-foot" role="contentinfo">
         <div class="row">
             </div>
             <div class="row footer-info">
