@@ -181,8 +181,9 @@ h4 {
     }
     .license {
         padding: 0; /* ensure proper fit */
+        padding-top: 40px;
         font-family: 'EB Garamond', serif;
-        font-size: 1.35em;
+        font-size: 1em;
     }
     .license a {
         text-decoration: underline;

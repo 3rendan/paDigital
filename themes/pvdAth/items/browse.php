@@ -2,12 +2,11 @@
 $pageTitle = __('Browse items');
 echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 ?>
-<div class="row">
-        <div class="col-sm-offset-3">
-        <h3><?php echo $pageTitle;?> <small><?php echo __('(%s items total)', $total_results); ?></small></h3>
-        </div>  
-</div>  
-
+<div class="container">
+    <div class="row col-sm-12">
+        <h3 style="text-align:left"><?php echo $pageTitle;?> <small><?php echo __('(%s items total)', $total_results); ?></small></h3> 
+    </div> 
+</div> 
 <div class="container">
 <!-- NAVTABS FOR BROWSE, TAGS, and SEARCH -->
 <div class="col-sm-12" style="padding-bottom:30px">

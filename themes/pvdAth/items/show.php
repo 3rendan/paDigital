@@ -2,11 +2,11 @@
 <?php
     echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show'));
 ?>
-<?php echo js_tag('lightbox', 'javascripts'); ?>
+
 
 <div class="container">
-    <div class="row col-sm-11 col-sm-offset-1">
-        <h2 class='item-title'><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h2>
+    <div class="row col-sm-12">
+        <h3 class='item-title'><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h3>
             <?php if (metadata('item', 'Collection Name')): ?>
             <div id="collection">
                 <p class="collection"><?php echo link_to_collection_for_item(); ?></p>
@@ -16,7 +16,7 @@
         <!-- <div class="col-sm-7 tombstone"> -->
             <div class="col-sm-7">
                 <ul class="nav nav-tabs nav-justified">
-                    <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
+                    <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">XINFO</a></li>
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
                     <li class='nav-item'><a href="#resources" data-toggle="tab" class="nav-link">RELATED RESOURCES</a></li>
                 </ul>
@@ -30,43 +30,43 @@
                             </tr>
                             <?php
                             $creator = metadata($item, array('MODS', 'Name'), array('delimiter' => '<br> '));
-                            if (strpos($creator, '<br> ') == TRUE) {     
+                            if (strpos($creator, '<br> ') == TRUE) {
                                 echo "<th scope=\"row\">CREATORS</th><td>$creator</td></tr>";
                             } elseif ($creator != ''){
                                 echo "<tr><th scope=\"row\"\>CREATOR</th><td>$creator</td></tr>";
                             } else{
                                 echo "<tr><th scope=\"row\">CREATOR</th><td>unknown</td></tr>";
-                            }           
+                            }
                             ?>
                             <?php
                             $date = metadata($item, array('Dublin Core', 'Date'));
                             if ($date != '') {
                                 echo "<tr><th scope=\"row\">DATE </th><td>$date</td></tr>";
-                            } 
+                            }
                             ?>
                             <?php
                             $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
                             if ($dimensions != '') {
                                 echo "<tr><th scope=\"row\">DIMENSIONS </th><td>$dimensions</td></tDIMENSIONS>";
-                            } 
+                            }
                             ?>
                             <?php
                             $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
                             if ($medium != '') {
                                 echo "<tr><td>MEDIUM </td><td>$medium</td></tr>";
-                            } 
+                            }
                             ?>
                             <?php
                             $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
                             if  ($pnote != '') {
                                 echo "<tr><td>PHYSICAL NOTE </td><td>$pnote</td></tr>";
-                            } 
+                            }
                             ?>
                             <?php
                             $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
                             if ($donor != '') {
                                 echo "<tr><td>DONOR </td><td>$donor</td></tr>";
-                            } 
+                            }
                             ?>
                             <?php
                             $x = metadata($item, array('MODS', 'Local accession'));
@@ -74,7 +74,7 @@
                             $accession = substr($y, 0, -3);
                             if (stripos($x,'9999') == FALSE) {
                                 echo "<tr><td>DATE OF ACCESSION </td><td>$accession</td></tr>";
-                            } 
+                            }
                             ?>
                             <?php
                             $library = metadata($item, array('MODS', 'Host collection'));
@@ -82,9 +82,9 @@
                             $llocation = $library . ": " . $location;
                             if ($location != '') {
                                 echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
-                            } 
+                            }
                             ?>
-                            </tbody> 
+                            </tbody>
                         </table>
                     </div>
                     <div role="tabpane" class="tab-pane fade" id="story">
@@ -95,7 +95,7 @@
                         $date = metadata($item, array('Item Type Metadata', 'Resources'));
                         if ($date != '') {
                             echo $date;
-                        } 
+                        }
                         ?>
                         <br>
                         <?php
@@ -103,17 +103,18 @@
                         if ($refNote != '') {
                             echo $refNote;
                         }
-                        ?>                   
-                    </div>           
+                        ?>
+                    </div>
                 </div>
             </div>
         <!-- </div> -->
         <div class="col-sm-5" style="padding-top:15px">
+        <!-- img-fluid modal resize -->
             <a href="#full-size" data-toggle="modal">
             <?php echo link_to_item(
-            item_image('square_thumbnail', array(), 0, $item), 
+            item_image('square_thumbnail', array(), 0, $item),
             array(
-                'class' => 'col-sm-5'), 
+                'class' => 'col-sm-5'),
                 'show', $item); ?>
             </a>
         </div>
@@ -143,7 +144,7 @@
                 <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please credit the Providence Athenæum when using this content.</p>
             </div>
         </div>
-        
+
         <div class="col-sm-4 col-sm-offset-1 dwnlds">
             <?php
                 $fs = metadata('item', array('Dublin Core','Identifier'));
@@ -179,10 +180,10 @@
         <ul class="pager text-center">
             <li class="previous"><?php echo link_to_previous_item_show(); ?></li>
             <li class="next"><?php echo link_to_next_item_show(); ?></li>
-        </ul>       
+        </ul>
     </div>
 
-  
+
 </div>
 <?php endif; ?>
 

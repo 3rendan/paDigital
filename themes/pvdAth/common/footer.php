@@ -9,9 +9,7 @@
                 <p class="text-center">
                     Powered by <a href="http://omeka.org" style='color:#fff'>Omeka</a>
                 </p>
-            </div>    
-        </div> 
-    </div>
+            </div>     
     </footer>
 </body>
 </html>

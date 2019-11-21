@@ -31,6 +31,8 @@
     <!-- Need more JavaScript files? Include them here -->
     <?php
         queue_js_file('lib/bootstrap.min');
+        queue_js_file('lib/bootstrap.min');
+        queue_js_file('lightbox');
         queue_js_file('globals');
         echo head_js();
     ?>
