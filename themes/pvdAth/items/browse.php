@@ -29,7 +29,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
     </div>
     <div class="tab-pane fade" id="browse-tags">
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
-            <?php echo "<div style=\"text-transform: uppercase;font-size: 1.25em;\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>   
+            <?php echo "<div class=\"tag-text container\"" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>   
             
     </div>
     <div class="tab-pane fade" id="browse-search">
@@ -39,14 +39,13 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
             'useSidebar' => false)); 
             ?>
     </div>
+</div>
+</div>
     </!-->
-
-
-    <div class="row">
-      <?php echo pagination_links(); ?></li>
+    <div class="container"  style="padding-bottom:20px">
+        <?php echo pagination_links(); ?>      
+        <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
     </div>
- 
-
 
 <div>
 <?php echo foot(); ?>

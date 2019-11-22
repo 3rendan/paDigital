@@ -16,56 +16,56 @@
         <!-- <div class="col-sm-7 tombstone"> -->
             <div class="col-sm-7">
                 <ul class="nav nav-tabs nav-justified">
-                    <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">XINFO</a></li>
+                    <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
                     <li class='nav-item'><a href="#resources" data-toggle="tab" class="nav-link">RELATED RESOURCES</a></li>
                 </ul>
                 <div class="tab-content tombstone">
                     <div role="tabpane" class="tab-pane fade in active"  id='info'>
-                        <table class="table table-striped">
+                        <table class="category">
                         <tbody>
                             <tr>
-                            <th scope="row">TITLE</th>
+                            <td class='mtdt'>TITLE</th>
                                 <td><?php echo metadata($item, array('Dublin Core', 'Title')); ?></td>
                             </tr>
                             <?php
                             $creator = metadata($item, array('MODS', 'Name'), array('delimiter' => '<br> '));
                             if (strpos($creator, '<br> ') == TRUE) {
-                                echo "<th scope=\"row\">CREATORS</th><td>$creator</td></tr>";
+                                echo "<td class='mtdt'>CREATORS</th><td>$creator</td></tr>";
                             } elseif ($creator != ''){
-                                echo "<tr><th scope=\"row\"\>CREATOR</th><td>$creator</td></tr>";
+                                echo "<tr><td class='mtdt'>CREATOR</th><td>$creator</td></tr>";
                             } else{
-                                echo "<tr><th scope=\"row\">CREATOR</th><td>unknown</td></tr>";
+                                echo "<tr><td class='mtdt'>CREATOR</th><td>unknown</td></tr>";
                             }
                             ?>
                             <?php
                             $date = metadata($item, array('Dublin Core', 'Date'));
                             if ($date != '') {
-                                echo "<tr><th scope=\"row\">DATE </th><td>$date</td></tr>";
+                                echo "<tr><td class='mtdt'>DATE </th><td>$date</td></tr>";
                             }
                             ?>
                             <?php
                             $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
                             if ($dimensions != '') {
-                                echo "<tr><th scope=\"row\">DIMENSIONS </th><td>$dimensions</td></tDIMENSIONS>";
+                                echo "<tr><td class='mtdt'>DIMENSIONS </><td>$dimensions</td></tDIMENSIONS>";
                             }
                             ?>
                             <?php
                             $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
                             if ($medium != '') {
-                                echo "<tr><td>MEDIUM </td><td>$medium</td></tr>";
+                                echo "<tr><td class='mtdt'>MEDIUM </td><td>$medium</td></tr>";
                             }
                             ?>
                             <?php
                             $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
                             if  ($pnote != '') {
-                                echo "<tr><td>PHYSICAL NOTE </td><td>$pnote</td></tr>";
+                                echo "<tr><td class='mtdt'>PHYSICAL NOTE </td><td>$pnote</td></tr>";
                             }
                             ?>
                             <?php
                             $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
                             if ($donor != '') {
-                                echo "<tr><td>DONOR </td><td>$donor</td></tr>";
+                                echo "<tr><td class='mtdt'>DONOR </td><td>$donor</td></tr>";
                             }
                             ?>
                             <?php
@@ -73,7 +73,7 @@
                             $y = trim($x, "PA-");
                             $accession = substr($y, 0, -3);
                             if (stripos($x,'9999') == FALSE) {
-                                echo "<tr><td>DATE OF ACCESSION </td><td>$accession</td></tr>";
+                                echo "<tr><td class='mtdt'>DATE OF ACCESSION </td><td>$accession</td></tr>";
                             }
                             ?>
                             <?php
@@ -81,7 +81,7 @@
                             $location = metadata($item, array('MODS', 'Physical location (library)'));
                             $llocation = $library . ": " . $location;
                             if ($location != '') {
-                                echo "<tr><td>LOCATION </td><td>$llocation</td></tr>";
+                                echo "<tr><td class='mtdt'>LOCATION </td><td>$llocation</td></tr>";
                             }
                             ?>
                             </tbody>
@@ -132,20 +132,20 @@
         </div>
 
     <div class="row">
-        <div class="row col-sm-7">
-            <?php if (metadata('item', 'has tags')): ?>
-            <div class="tags">
-                <h5 style="padding-left:20px"><?php echo __('TAGS'); ?></h5>
-                <div class="tag-text"><?php echo tag_string('item'); ?></div>
+        <div class="col-sm-7">
+            <h3 style="padding-left:20px">TAGS</h3>
+            <div class="container tag-text col-sm-12" style='justify-content:space-evenly'>
+                <?php if (metadata('item', 'has tags')): ?>
+                <?php echo tag_string('item'); ?>
+                <?php endif; ?>
             </div>
-        <?php else: echo __('TAGS'); ?>
-        <?php endif; ?>
             <div class="col-sm-12 license">
                 <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please credit the Providence Athenæum when using this content.</p>
             </div>
         </div>
+        </div>
 
-        <div class="col-sm-4 col-sm-offset-1 dwnlds">
+        <div class="col-sm-4 dwnlds">
             <?php
                 $fs = metadata('item', array('Dublin Core','Identifier'));
                 $fsz = metadata('item', array('Dublin Core','Identifier')) . ".zip";
@@ -176,15 +176,16 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <ul class="pager text-center">
-            <li class="previous"><?php echo link_to_previous_item_show(); ?></li>
-            <li class="next"><?php echo link_to_next_item_show(); ?></li>
-        </ul>
-    </div>
-
-
 </div>
+</div>
+<div class="container"  style="padding-bottom:20px">
+    <?php echo link_to_previous_item_show(); ?>
+    <?php echo link_to_next_item_show(); ?>
+</div>
+
+
+
+
 <?php endif; ?>
 
 

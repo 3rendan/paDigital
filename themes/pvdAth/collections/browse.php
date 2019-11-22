@@ -20,8 +20,9 @@
         <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
     </div>
       </div>
-    <div class="row">
-        <?php echo pagination_links(); ?>   
+    <<div class="container"  style="padding-bottom:20px">
+        <?php echo pagination_links(); ?>      
+        <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
     </div>
 
 <?php fire_plugin_hook('public_collections_browse', array('collections'=> $collections, 'view' => $this)); ?>
