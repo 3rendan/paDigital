@@ -110,7 +110,7 @@
         <!-- </div> -->
         <div class="col-sm-5" style="padding-top:15px">
         <!-- img-fluid modal resize -->
-            <a href="#full-size" data-toggle="modal">
+            <a type="button" data-toggle="modal" data-target="#full-size">
             <?php echo link_to_item(
             item_image('square_thumbnail', array(), 0, $item),
             array(
@@ -143,9 +143,9 @@
                 <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please credit the Providence Athenæum when using this content.</p>
             </div>
         </div>
-        </div>
 
-        <div class="col-sm-4 dwnlds">
+
+        <div class="col-sm-5 dwnlds">
             <?php
                 $fs = metadata('item', array('Dublin Core','Identifier'));
                 $fsz = metadata('item', array('Dublin Core','Identifier')) . ".zip";
@@ -153,7 +153,7 @@
                 if (file_exists($fileName) == TRUE) {
                         echo "<a href=\"/uploads/$fsz\"><button class=\"btn-dwnld\" title=\"A compressed TIF download of the image\">Download (TIF)</button></a>";
                     }     ?>
-                <a href="/uploads/<?=$fs?>.jpg"><button type="button" class="btn-dwnld" title="A full resolution image of the item in JPEG format">Download (JPEG)</button></a>
+                <a href="/uploads/<?=$fs?>.jpg" download><button type="button" class="btn-dwnld" title="A full resolution image of the item in JPEG format">Download (JPEG)</button></a>
                 <button type="button" class="btn-dwnld" data-toggle="modal" data-target="#cite">Citation</button><br>
                 <br />
                     <?php
@@ -182,6 +182,9 @@
     <?php echo link_to_previous_item_show(); ?>
     <?php echo link_to_next_item_show(); ?>
 </div>
+<script>
+
+</script>
 
 
 
