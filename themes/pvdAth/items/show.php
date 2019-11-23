@@ -110,11 +110,11 @@
         <!-- </div> -->
         <div class="col-sm-5" style="padding-top:15px">
         <!-- img-fluid modal resize -->
-            <a type="button" data-toggle="modal" data-target="#full-size">
+            <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
             <?php echo link_to_item(
             item_image('square_thumbnail', array(), 0, $item),
             array(
-                'class' => 'col-sm-5'),
+                'class' => 'kemba'),
                 'show', $item); ?>
             </a>
         </div>
