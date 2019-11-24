@@ -111,12 +111,16 @@
         <div class="col-sm-5" style="padding-top:15px">
         <!-- img-fluid modal resize -->
             <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
+            <?php 
+            $fs = metadata('item', array('Dublin Core','Identifier')); ?>
+            <a href="/uploads/<?=$fs?>.png" data-lightbox="image-1" data-title="Click to see a full size image">
             <?php echo link_to_item(
             item_image('square_thumbnail', array(), 0, $item),
             array(
                 'class' => 'kemba'),
                 'show', $item); ?>
             </a>
+
         </div>
         <div class="modal fade" id='full-size' tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
