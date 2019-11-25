@@ -24,7 +24,7 @@
     <?php
         queue_css_file('lib/bootstrap.min');
         queue_css_file('lib/font-awesome.min');
-        queue_css_file('lightbox.min');
+        queue_css_file('lib/ekko-lightbox');
         queue_css_file('style');
         echo head_css();
     ?>
@@ -33,7 +33,7 @@
     <?php
         queue_js_file('lib/bootstrap.min');
         queue_js_file('lib/jquery.min');
-        queue_js_file('node_modules/lightbox2/src/js/lightbox');
+        queue_js_file('lib/ekko-lightbox.min');
         queue_js_file('globals');
         echo head_js();
     ?>

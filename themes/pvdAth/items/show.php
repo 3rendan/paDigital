@@ -111,28 +111,20 @@
         <div class="col-sm-5" style="padding-top:15px">
         <!-- img-fluid modal resize -->
             <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
-            <?php 
-            $fs = metadata('item', array('Dublin Core','Identifier')); ?>
-            <a href="/uploads/<?=$fs?>.png" data-lightbox="image-1" data-title="Click to see a full size image">
-            <?php echo link_to_item(
+                <?php
+                 $fs = link_to_item(
+                    item_image('fullsize', array(), 0, $item),
+                    array(
+                        'class' => 'kemba',
+                        'id' => 'lightbox'),
+                        'show', $item); ?> 
+            <a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text"><?php echo link_to_item(
             item_image('square_thumbnail', array(), 0, $item),
             array(
-                'class' => 'kemba'),
+                'class' => 'kemba',
+                'id' => 'lightbox'),
                 'show', $item); ?>
             </a>
-
-        </div>
-        <div class="modal fade" id='full-size' tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                    <img src="http://digital.provath.org/uploads/PA-9999-10.jpg" alt="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
         </div>
 
     <div class="row">
