@@ -73,10 +73,10 @@
                             </tbody>
                         </table>
                     </div>
-                    <div role="tabpane" class="tab-pane fade" id="story">
+                    <div role="tabpane" class="tab-pane" id="story">
                         <?php echo metadata('item', array('Dublin Core', 'Description')); ?>
                     </div>
-                    <div role="tabpane" class="tab-pane fade" id="resources">
+                    <div role="tabpane" class="tab-pane" id="resources">
                         <?php
                         $date = metadata($item, array('Item Type Metadata', 'Resources'));
                         if ($date != '') {
