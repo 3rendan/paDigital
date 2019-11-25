@@ -11,7 +11,7 @@
         <?php 
         foreach (loop('collections') as $collection) {
             if ($collectionImage = record_image('collection', 'square_thumbnail')){ 
-                echo "<div class=\"browse-items\">" . link_to_collection($collectionImage, array('class' => 'image'));
+                echo "<div class=\"browse-items\">" . link_to_collection($collectionImage, array('class' => 'image', 'id' => 'lightbox'));
             }
             echo "<h5>" . link_to_collection(metadata('collection', array('Dublin Core', 'Title')), array('class'=>'permalink')) . "</h5></div>"; 
 

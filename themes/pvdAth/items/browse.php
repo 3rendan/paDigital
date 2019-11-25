@@ -21,7 +21,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
         <div class="container">
             <?php 
             foreach(loop('items') as $item) {
-                echo "<div class=\"browse-items\">" . link_to_item(item_image('square_thumbnail'));
+                echo "<div class=\"browse-items\">" . link_to_item(item_image('square_thumbnail', array('id' => 'lightbox')));
                 echo "<h5>" . link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')) . "</h5></div>";
                 }
                 ?>
