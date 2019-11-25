@@ -37,46 +37,32 @@
                             } else{
                                 echo "<tr><td class='mtdt'>CREATOR</th><td>unknown</td></tr>";
                             }
-                            ?>
-                            <?php
                             $date = metadata($item, array('Dublin Core', 'Date'));
                             if ($date != '') {
                                 echo "<tr><td class='mtdt'>DATE </th><td>$date</td></tr>";
                             }
-                            ?>
-                            <?php
                             $dimensions = metadata($item, array('Item Type Metadata', 'Dimensions'));
                             if ($dimensions != '') {
                                 echo "<tr><td class='mtdt'>DIMENSIONS </><td>$dimensions</td></tDIMENSIONS>";
                             }
-                            ?>
-                            <?php
                             $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
                             if ($medium != '') {
                                 echo "<tr><td class='mtdt'>MEDIUM </td><td>$medium</td></tr>";
                             }
-                            ?>
-                            <?php
                             $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
                             if  ($pnote != '') {
                                 echo "<tr><td class='mtdt'>PHYSICAL NOTE </td><td>$pnote</td></tr>";
                             }
-                            ?>
-                            <?php
                             $donor = metadata($item, array('MODS', 'Acquisition note(s)'));
                             if ($donor != '') {
                                 echo "<tr><td class='mtdt'>DONOR </td><td>$donor</td></tr>";
                             }
-                            ?>
-                            <?php
                             $x = metadata($item, array('MODS', 'Local accession'));
                             $y = trim($x, "PA-");
                             $accession = substr($y, 0, -3);
                             if (stripos($x,'9999') == FALSE) {
                                 echo "<tr><td class='mtdt'>DATE OF ACCESSION </td><td>$accession</td></tr>";
                             }
-                            ?>
-                            <?php
                             $library = metadata($item, array('MODS', 'Host collection'));
                             $location = metadata($item, array('MODS', 'Physical location (library)'));
                             $llocation = $library . ": " . $location;
