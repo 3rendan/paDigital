@@ -102,7 +102,8 @@
         <div class="col-sm-5" style="padding-top:15px">
         <!-- img-fluid modal resize -->
         <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
-            <?php 
+            <?php
+            $fs 
             echo link_to_item(
                 item_image('square_thumbnail', array('id' => 'lightbox'), 0, $item),
                 array(
@@ -114,7 +115,7 @@
                 <div class="modal-content">              
                     <div class="modal-body">
       	                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <img src="uploads/athena.jpg" id="imagepreview" style="width: 100%;" >
+                    <img src="http://digital.provath.org/uploads/athena.jpg" id="imagepreview" style="width: 100%;" >
                     </div>
                 </div>
             </div>
