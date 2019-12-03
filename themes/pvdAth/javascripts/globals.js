@@ -2,7 +2,9 @@
 $(()=> {
 
 $(`#lightbox`).click(function() {
-  alert( "Handler for .click() called." );
+//   alert(localAccession);
+//   $('#imagepreview').attr('src', $('#imageresource').attr('src')); 
+  $('#imagemodal').show(); 
 });
 
 

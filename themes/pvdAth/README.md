@@ -8,12 +8,14 @@ A starter Omeka theme, built for Omeka v2.2.2, featuring Twitter Boostrap v3.3.2
 *  Open and available for anyone to use
 
 ### Internal Design Style Guide
+  - updated to Bootstrap v.
   - border-radius is 8px
   - colors
     - light grey: #b6b6b6;
     - dark grey: #999999;
     - green: #C4D425;
     - black
+  - fade for modal boxes has been deprecated in Bootstrap 4
     
 
 ### Questions? Requests?

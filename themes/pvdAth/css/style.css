@@ -226,6 +226,9 @@ h4 {
     #resources a {
         color: #000;
     }
+    #localAccession {
+        visibility: hidden;
+    }
     #resources a:hover {
         color: #C4D425;
     }

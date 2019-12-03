@@ -23,8 +23,12 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
             foreach(loop('items') as $item) {
                 echo "<div class=\"browse-items\">" . link_to_item(item_image('square_thumbnail', array('id' => 'lightbox')));
                 echo "<h5>" . link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')) . "</h5></div>";
+                $x = metadata($item, array('MODS', 'Local accession'));
                 }
                 ?>
+                <script>
+                    const localAccession = (<?php echo json_encode($x); ?> + `.jpg`);
+                </script>
         </div>
     </div>
     <div class="tab-pane fade" id="browse-tags">
