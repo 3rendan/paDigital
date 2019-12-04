@@ -103,19 +103,21 @@
         <!-- img-fluid modal resize -->
         <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
             <?php
-            $fs 
+            $fs = metadata('item', array('Dublin Core','Identifier'));
+            $fsz = metadata('item', array('Dublin Core','Identifier')) . ".zip";
+            $fileImgName = BASE_DIR . "/uploads/" . $fs . ".jpg"; 
             echo link_to_item(
                 item_image('square_thumbnail', array('id' => 'lightbox'), 0, $item),
                 array(
                     'class' => 'kemba'),
                     'show', $item); ?>               
         </div>
-        <div class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">              
                     <div class="modal-body">
       	                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <img src="http://digital.provath.org/uploads/athena.jpg" id="imagepreview" style="width: 100%;" >
+                    <img src="http://digital.provath.org/uploads/PA-1884-01.jpg" style="width: 100%;" >
                     </div>
                 </div>
             </div>
@@ -137,8 +139,7 @@
 
         <div class="col-sm-5 dwnlds">
             <?php
-                $fs = metadata('item', array('Dublin Core','Identifier'));
-                $fsz = metadata('item', array('Dublin Core','Identifier')) . ".zip";
+                
                 $fileName = BASE_DIR . "/uploads/" . $fs . ".zip";
                 if (file_exists($fileName) == TRUE) {
                         echo "<a href=\"/uploads/$fsz\"><button class=\"btn-dwnld\" title=\"A compressed TIF download of the image\">Download (TIF)</button></a>";
