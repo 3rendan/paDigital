@@ -112,7 +112,7 @@
                     'class' => 'kemba'),
                     'show', $item); ?>               
         </div>
-        <div class="modal" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal" id="imageModal" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">              
                     <div class="modal-body">

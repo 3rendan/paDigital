@@ -31,12 +31,12 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
                 </script>
         </div>
     </div>
-    <div class="tab-pane fade" id="browse-tags">
+    <div class="tab-pane" id="browse-tags">
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
             <?php echo "<div class=\"tag-text container\"" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>   
             
     </div>
-    <div class="tab-pane fade" id="browse-search">
+    <div class="tab-pane" id="browse-search">
         <?php echo $this->partial('items/search-form.php',
         array(
             'formAttributes' => array('id'=>'advanced-search-form'),
