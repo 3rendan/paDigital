@@ -1674,6 +1674,11 @@ function head($vars = array(), $file = 'header')
 {
     return common($file, $vars);
 }
+function tag($vars = array(), $file = 'tags')
+{
+    return item($file, $vars);
+}
+
 
 /**
  * Get the view's footer HTML.

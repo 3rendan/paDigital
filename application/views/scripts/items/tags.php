@@ -9,6 +9,8 @@ echo head(array('title'=>$pageTitle, 'bodyclass'=>'items tags'));
     <?php echo public_nav_items(); ?>
 </nav>
 
-<?php echo tag_cloud($tags, 'items/browse'); ?>
+<?php 
+sort($tags);
+echo tag_cloud($tags, 'items/browse'); ?>
 
 <?php echo foot(); ?>

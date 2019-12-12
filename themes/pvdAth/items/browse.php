@@ -26,15 +26,11 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
                 $x = metadata($item, array('MODS', 'Local accession'));
                 }
                 ?>
-                <script>
-                    const localAccession = (<?php echo json_encode($x); ?> + `.jpg`);
-                </script>
         </div>
     </div>
     <div class="tab-pane" id="browse-tags">
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
-            <?php echo "<div class=\"tag-text container\"" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>   
-            
+        <?php echo "<div class=\"tag-text container\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>
     </div>
     <div class="tab-pane" id="browse-search">
         <?php echo $this->partial('items/search-form.php',
