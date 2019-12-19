@@ -52,7 +52,7 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header class="banner">
         <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-        <h1 class="text-center"><a href="http://digital.provath.org"><img class="img-fluid site-title" src="/uploads/wordmark.png" alt="THE PROVIDENCE ATHENAEUM" style="margin-top:-15px;"></h1>
+        <h1 class="text-center"><a href="http://digital.provath.org">The Providence Athenæum</h1>
         <h2 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h2>
         <nav class="navbar navbar-default" role="navigation">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">

@@ -31,7 +31,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
     <div class="tab-pane" id="browse-tags">
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
         <?php echo "<div class=\"tag-text container\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>
-        <?php echo tag_string(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse')); ?>
+        
     </div>
     <div class="tab-pane" id="browse-search">
         <?php echo $this->partial('items/search-form.php',
