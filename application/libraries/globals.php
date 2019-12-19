@@ -3132,7 +3132,7 @@ function tag_string($recordOrTags = null, $link = 'items/browse', $delimiter = n
 
     $tagStrings = array();
     foreach ($tags as $tag) {
-        $name = $tag['name'];
+        $name = $tag;
         if (!$link) {
             $tagStrings[] = html_escape($name);
         } else {
