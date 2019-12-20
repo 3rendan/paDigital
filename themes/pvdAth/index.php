@@ -4,11 +4,11 @@
 
 
 <!-- BEGIN CAROUSEL -->
-<div id="myCarousel" class="carousel">
+<div id="myCarousel" class="carousel" data-ride='carousel'>
   <!-- Indicators -->
 
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li> 
     <li data-target="#myCarousel" data-slide-to="3"></li>
@@ -59,13 +59,13 @@
 
   <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
+            <img src="uploads/carousel/arrow_left.png" style='margin-top:140px' alt="Left Arrow">
         </a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
+            <img src="uploads/carousel/arrow_right.png" style='margin-top:140px' alt="Right Arrow">
         </a>
 </div>
-</div>
+
 
 
 
