@@ -26,6 +26,10 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
                 $x = metadata($item, array('MODS', 'Local accession'));
                 }
                 ?>
+                <div class="container"  style="padding-bottom:20px">
+                    <?php echo pagination_links(); ?>      
+                    <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
+                </div>
         </div>
     </div>
     <div class="tab-pane" id="browse-tags">
@@ -43,10 +47,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 </div>
 </div>
     </!-->
-    <div class="container"  style="padding-bottom:20px">
-        <?php echo pagination_links(); ?>      
-        <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
-    </div>
+    
 
 <div>
 <?php echo foot(); ?>
