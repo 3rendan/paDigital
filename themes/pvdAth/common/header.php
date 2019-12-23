@@ -38,7 +38,7 @@
         echo head_js();
     ?>
     
-    <link rel="stylesheet" type"text/css" href="http://digital.provath.org/themes/pvdAth/css/print.css" media="print">
+    
     <link rel="shortcut icon" href="favicon.ico" />
     
 

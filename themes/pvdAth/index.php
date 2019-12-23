@@ -4,16 +4,16 @@
 
 
 <!-- BEGIN CAROUSEL -->
-<div id="myCarousel" class="carousel" data-ride='carousel'>
+<div id="myCarousel" class="carousel slide" data-ride='carousel'>
   <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> 
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
 
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li> 
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
-  </ol>
 
 
   <!-- Carousel for slides -->
@@ -58,10 +58,10 @@
     </div>
 
   <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel" role='button' data-slide="prev">
             <img src="uploads/carousel/arrow_left.png" style='margin-top:140px' alt="Left Arrow">
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" role='button' data-slide="next">
             <img src="uploads/carousel/arrow_right.png" style='margin-top:140px' alt="Right Arrow">
         </a>
 </div>
