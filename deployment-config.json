@@ -1,19 +1,9 @@
 {
     "type": "sftp",
-
     "host": "50.116.93.204",
-    "user": "bryan",
-    "password": "Ze5%1Yp4r765HUc1Mq^&%gOkAV",
-    "port": "22",
-
-    "save_before_upload": true,
-    "upload_on_save": true,
-    "sync_down_on_open": false,
-    "sync_skip_deletes": false,
-    "sync_same_age": true,
-    "confirm_downloads": false,
-    "confirm_sync": true,
-    "confirm_overwrite_newer": false,
-
-    "remote_path": "/home3/kgarrepy/digital"
+    "username": "kgarrepy",
+    "password": "SiMTk!4P5A#jEk#&FVVnykiC",
+    "port": 2222,
+    "remotePath": "/home3/kgarrepy/digital",
+    "uploadOnSave": true
 }

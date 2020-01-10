@@ -98,23 +98,23 @@
                 </div>
             </div>
         <!-- </div> -->
-        
+
         <div class="col-sm-5" style="padding-top:15px">
         <!-- img-fluid modal resize -->
         <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
             <?php
             $fs = metadata('item', array('Dublin Core','Identifier'));
             $fsz = metadata('item', array('Dublin Core','Identifier')) . ".zip";
-            $fileImgName = BASE_DIR . "/uploads/" . $fs . ".jpg"; 
+            $fileImgName = BASE_DIR . "/uploads/" . $fs . ".jpg";
             echo link_to_item(
                 item_image('square_thumbnail', array('id' => 'lightbox'), 0, $item),
                 array(
                     'class' => 'kemba'),
-                    'show', $item); ?>               
+                    'show', $item); ?>
         </div>
         <div class="modal" id="imageModal" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">              
+                <div class="modal-content">
                     <div class="modal-body">
       	                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <img src="http://digital.provath.org/uploads/PA-1884-01.jpg" style="width: 100%;" >
@@ -139,7 +139,6 @@
 
         <div class="col-sm-5 dwnlds">
             <?php
-                
                 $fileName = BASE_DIR . "/uploads/" . $fs . ".zip";
                 if (file_exists($fileName) == TRUE) {
                         echo "<a href=\"/uploads/$fsz\"><button class=\"btn-dwnld\" title=\"A compressed TIF download of the image\">Download (TIF)</button></a>";
@@ -151,20 +150,30 @@
                     $url = $_SERVER['REQUEST_URI']; ?>
         </div>
         <div id="cite" class="modal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 class="modal-title">Citation</h3>
-                    </div>
-                    <div class="modal-body">
-                        <p class="hanging"><?php echo metadata('item', 'citation', array('no_escape' => true))?></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 class="modal-title">Citation</h3>
+                  </div>
+                  <div class="modal-body">
+                      <p class="hanging"><?php echo metadata('item', 'citation', array('no_escape' => true))?></p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="social col-sm-3 col-sm-offset-1">
+          <a href="http://www.facebook.com/share.php?u=https://digital.provath.org<?=$url?>" target="_blank"><img src="/uploads/facebook.png" alt="Facebook"></a>
+          <a href="https://twitter.com/share?text=https://digital.provath.org<?=$url?>" target="_blank"><img src="/uploads/twit.jpeg" alt="Twitter" /></a>
+          <a href="#" onclick="window.print();return false;"><img src="/uploads/print.svg"  alt="Print"/></a>
+        </div>
+        </div>
+
+
         </div>
     </div>
 </div>

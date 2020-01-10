@@ -33,6 +33,7 @@
     <?php
         queue_js_file('lib/bootstrap.min');
         queue_js_file('lib/jquery.min');
+        queue_js_file('lib/jquery-ui.min');
         // queue_js_file('ekko-lightbox');
         queue_js_file('globals');
         echo head_js();

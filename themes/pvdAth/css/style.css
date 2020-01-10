@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
 /* Add your custom CSS here
 
-/* 
+/*
 COLORS
    light grey: #eee;
    grey: #b6b6b6;
@@ -129,7 +129,7 @@ h4 {
         border-radius: 8px 8px 0 0;
         background-color: #eee;
         border: .25px #b6b6b6 solid;
-        font-size: 1.25em;        
+        font-size: 1.25em;
     }
     .nav-item:active {
         background-color: #fff;
@@ -171,13 +171,13 @@ h4 {
     .dwnlds {
         padding: 10px;
         /* margin: auto; */
-        
+
     }
     .btn-dwnld {
         display: block;
         background-color: #999999;
         color: #fff;
-        width: 80%;       
+        width: 80%;
         padding: 10px;
         margin: auto;
         border-radius: 8px;
@@ -251,9 +251,9 @@ h4 {
         text-decoration: underline;
         color: #000;
     }
-    table td, th, td { 
+    table td, th, td {
         border-left:10px solid #fff;
-        border-bottom:10px solid #fff; 
+        border-bottom:10px solid #fff;
         padding: 10px;
         border-radius: 4em;
     }
@@ -274,7 +274,7 @@ h4 {
 }
 
 /* BROWSE  */
-	
+
 .browse-items a {
 	text-decoration: none;
 }
@@ -291,7 +291,7 @@ h4 {
 	width: 300px;
     border-top: solid #b6b6b6 1.25em;
     display: inline-block;
-    text-align: center;	
+    text-align: center;
 	height: 450px;
 	font-family: 'EB Garamond', serif;
 	text-transform: capitalize;
@@ -306,7 +306,7 @@ h4 {
 
 .tagged {
     text-transform: uppercase;
-    font-size: 1.25em;   
+    font-size: 1.25em;
     font-family: 'EB Garamond', serif;
     padding-bottom: 30px;
     background-color: #fff;
@@ -366,4 +366,12 @@ h5 {
     padding-bottom: 50px;
     display: block;
     margin: auto;
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+.social img {
+  display: block;
+  height: 32px;
 }
