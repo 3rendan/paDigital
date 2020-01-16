@@ -99,7 +99,7 @@
             </div>
         <!-- </div> -->
 
-        <div class="col-sm-5" style="padding-top:15px">
+        <div class="col-sm-5" type='button' style="padding-top:15px">
         <!-- img-fluid modal resize -->
         <!-- <a type="button" data-toggle="modal" data-target="#full-size"> -->
             <?php
@@ -112,12 +112,23 @@
                     'class' => 'kemba'),
                     'show', $item); ?>
         </div>
-        <div class="modal" id="imageModal" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal" id="imageModal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
+                  <div class="modal-header">
+                    <?php
+                    $title = metadata($item, array('Dublin Core', 'Title'));
+                    echo "<h5 class='modal-title'>$title</h5>";
+                    ?>
+                    </div>
                     <div class="modal-body">
-      	                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <img src="http://digital.provath.org/uploads/PA-1884-01.jpg" style="width: 100%;" >
+                      <?php
+                      $popup = $fs . ".jpg";
+                      echo "<img src='http://digital.provath.org/uploads/$popup' style='width: 100%;' >";
+                      ?>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="closeModal">Close</button>
                     </div>
                 </div>
             </div>
@@ -153,7 +164,6 @@
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                       <h3 class="modal-title">Citation</h3>
                   </div>
                   <div class="modal-body">
@@ -169,7 +179,7 @@
         <div class="social col-sm-3 col-sm-offset-1">
           <a href="http://www.facebook.com/share.php?u=https://digital.provath.org<?=$url?>" target="_blank"><img src="/uploads/facebook.png" alt="Facebook"></a>
           <a href="https://twitter.com/share?text=https://digital.provath.org<?=$url?>" target="_blank"><img src="/uploads/twit.jpeg" alt="Twitter" /></a>
-          <a href="#" onclick="window.print();return false;"><img src="/uploads/print.svg"  alt="Print"/></a>
+          <!--<a href="#" onclick="window.print();return false;"><img src="/uploads/print.svg"  alt="Print"/></a>-->
         </div>
         </div>
 

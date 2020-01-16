@@ -31,7 +31,7 @@ html {
 h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 3.5vw;
+    font-size: 1.5vw;
 
 }
 header h2 { /* for subheading of header */
@@ -39,7 +39,7 @@ header h2 { /* for subheading of header */
     margin-top: -20px;
     padding: 0 0 1em;
     color: #fff;
-    font-size: 3vw;
+    font-size: 1.25vw;
     font-style: italic;
     font-family: 'EB Garamond', serif;
 }
@@ -369,7 +369,7 @@ h5 {
 }
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .social img {
   display: block;

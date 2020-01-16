@@ -38,10 +38,10 @@
         queue_js_file('globals');
         echo head_js();
     ?>
-    
-    
+
+
     <link rel="shortcut icon" href="favicon.ico" />
-    
+
 
 
     <!--[if lt IE 9]>
@@ -79,5 +79,5 @@
 </ul>
 </div>-->
     <main id="content" role="main">
-      
+
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
