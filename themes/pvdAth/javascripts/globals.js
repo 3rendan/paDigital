@@ -4,7 +4,7 @@ $(()=> {
 $(`#lightbox`).click(function(e) {
   e.preventDefault();
   // alert(localAccession);
-//   $('#imagepreview').attr('src', $('#imageresource').attr('src'));
+  // $('#imagepreview').attr('src', $('#imageresource').attr('src'));
   $('#imageModal').dialog();
 });
 $(`#closeModal`).click(function() {
