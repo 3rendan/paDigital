@@ -54,7 +54,7 @@
     <header class="banner">
         <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         <h1 class="text-center"><a href="http://digital.provath.org">The Providence Athenæum</h1>
-        <h2 class="text-center"><?php echo __('Digital Art Collection'); ?></a></h2>
+        <h2 class='text-center'>Digital Art Collection</h2></a>
         <nav class="navbar navbar-default" role="navigation">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
                     <span class="sr-only">Menu</span>
