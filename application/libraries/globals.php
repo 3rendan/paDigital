@@ -3136,7 +3136,7 @@ function tag_string($recordOrTags = null, $link = 'items/browse', $delimiter = n
         if (!$link) {
             $tagStrings[] = html_escape($name);
         } else {
-            $tagStrings[] = '<a href="' . html_escape(url($link, array('tags' => $name))) . '" rel="tag">' . html_escape($name) . '</a>';
+            $tagStrings[] = "<a href='http://digital.provath.org/items/browse?tags[name]=" . html_escape($name) . "'>" . html_escape($name) . '</a>';
         }
     }
     return join($tagStrings);
@@ -3495,7 +3495,7 @@ function get_tags_for_items_in_collection($collection = null) {
     // Get the Tag table.
     $table = $db->getTable('Tag');
     // Build the select query.
-    $select = $table->getSelectForFindBy();   
+    $select = $table->getSelectForFindBy();
     // Join to the Item table where the collection_id is equal to the ID of our Collection.
     if ($collection) {
         $table->filterByTagType($select, 'Item');

@@ -137,7 +137,7 @@
     <div class="row">
         <div class="col-sm-7">
             <h3 style="padding-left:20px">TAGS</h3>
-            <div class="container tag-text col-sm-12" style='justify-content:space-evenly'>
+            <div class="container tag-text col-sm-12" style='justify-content:space-around;'>
                 <?php if (metadata('item', 'has tags')): ?>
                 <?php echo tag_string('item'); ?>
                 <?php endif; ?>
