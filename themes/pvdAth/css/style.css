@@ -378,9 +378,30 @@ h5 {
   h1 {
     font-size: 1.5em;
   }
-}
-@media only screen and (max-width: 600px) {
   h2 {
     font-size: 1.3em;
   }
+  .nav-item {
+    font-size: 1em;
+  }
+  .nav > li > a {
+    padding: 5px 5px;
+  }
+  table td, th, td {
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    padding: 5px;
+    padding-left: 8px;
+    border-radius: 2em;
+  }
+  .category {
+    font-size: 1em;
+    margin-left: 0;
+  }
+  .item-title {
+    font-size: 1.1em;
+  }
+  .collection {
+    font-size: .9em;
+  } 
 }
