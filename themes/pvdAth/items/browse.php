@@ -9,7 +9,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 </div>
 <div class="container">
 <!-- NAVTABS FOR BROWSE, TAGS, and SEARCH -->
-<div class="col-sm-12" style="padding-bottom:30px">
+<div id="noMobile" class="col-sm-12" style="padding-bottom:30px">
     <ul class="nav nav-tabs nav-justified">
         <li class="active"><a data-toggle="tab" href="#all">BROWSE ALL</a></li>
         <li><a data-toggle="tab" href="#browse-tags">BROWSE BY TAG</a></li>

@@ -13,12 +13,21 @@
             </div>
     </div>
 <div class="container">
+  <div id='mobileLightbox' type='button'>
+
+      <?php
+      echo link_to_item(
+          item_image('square_thumbnail', array(), 0, $item),
+          array(
+              'class' => 'kemba'),
+              'show', $item); ?>
+  </div>
         <!-- <div class="col-sm-7 tombstone"> -->
             <div class="col-sm-7">
-                <ul class="nav nav-tabs nav-justified">
+                <ul id="noMobile" class="nav nav-tabs nav-justified">
                     <li class='nav-item'><a href="#info" data-toggle="tab" class="nav-link active">INFO</a></li>
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
-                    <li class='nav-item'><a href="#resources" data-toggle="tab" class="nav-link">RELATED RESOURCES</a></li>
+                    <li class='nav-item' id='cpu'><a href="#resources" data-toggle="tab" class="nav-link">RESOURCES</a></li>
                 </ul>
                 <div class="tab-content tombstone">
                     <div role="tabpane" class="tab-pane fade in active"  id='info'>
@@ -179,6 +188,7 @@
         <div class="social col-sm-3 col-sm-offset-1">
           <a href="http://www.facebook.com/share.php?u=https://digital.provath.org<?=$url?>" target="_blank"><img src="/uploads/facebook.png" alt="Facebook"></a>
           <a href="https://twitter.com/share?text=https://digital.provath.org<?=$url?>" target="_blank"><img src="/uploads/twit.jpeg" alt="Twitter" /></a>
+          <!-- <a href="https://twitter.com/share?text=https://digital.provath.org<?=$url?>" id="noDesktop" target="_blank"><img src="/uploads/inst.png" alt="Instagram" /></a> -->
           <!--<a href="#" onclick="window.print();return false;"><img src="/uploads/print.svg"  alt="Print"/></a>-->
         </div>
         </div>
