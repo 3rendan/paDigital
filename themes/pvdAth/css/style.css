@@ -48,6 +48,10 @@ h2 { /* for subheading of header */
 h5 {
     font-size: 1.35em;
 }
+select {
+  border: .5px solid black;
+  border-radius: 4px;
+}
 .banner {
     background: #000;
     margin: 0;
@@ -80,6 +84,9 @@ h5 {
 /*  */
 .banner a {
     color: white;
+}
+#slide-out {
+  display: none;
 }
 .btn-green {
     background-color: #C4D425;
@@ -120,7 +127,7 @@ h4 {
         color: white;
     }
     .nav-item {
-        border-radius: 8px 8px 0 0;
+        border-radius: 4px 4px 0 0;
         background-color: #eee;
         border: .25px #b6b6b6 solid;
         font-size: 1.25em;
@@ -143,7 +150,7 @@ h4 {
     }
     .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
         background-color: white;
-        border-radius: 8px;
+        border-radius: 4px;
     }
     .row {
         margin-right: 0;
@@ -151,7 +158,7 @@ h4 {
     }
     input {
         border: .5px black solid;
-        border-radius: 8px;
+        border-radius: 4px;
     }
     /* .nav-link > active {
         color: #000;
@@ -174,7 +181,7 @@ h4 {
         width: 80%;
         padding: 10px;
         margin: auto;
-        border-radius: 8px;
+        border-radius: 4px;
     }
     .tag-text a {
         font-size: 1.25em;
@@ -290,8 +297,11 @@ h4 {
 	font-family: 'EB Garamond', serif;
 	text-transform: capitalize;
 	font-size: 1em;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.phone-nav {
+  display: none;
 }
 /* COLLECTIONS DISPLAY */
 
@@ -387,7 +397,7 @@ h5 {
 #cpu {
   visibility: visible;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 764px) {
   h1 {
     font-size: 1.5em;
   }
@@ -402,33 +412,43 @@ h5 {
   table td, th, td {
     border-left: 5px solid #fff;
     border-bottom: 5px solid #fff;
-    padding: 8px;
-    padding-left: 8px;
+    padding: 4px;
+    padding-left: 4px;
     border-radius: 2em;
+  }
+  .form-group {
+    width: 40vw;
+  }
+  .form-group > a {
+    display: none;
+  }
+  .form-control {
+    height: 25px;
   }
   .nav-item {
     font-size: 1em;
   }
   .nav > li > a {
     padding: 5px 5px; */
-  }
-  #cpu {
-    display: none;
+    font-size: .8em;
   }
   .tag-text a {
       font-size: 1em;
       text-transform: uppercase;
-      padding: 8px;
+      padding: 4px;
       font-family: 'EB Garamond', serif;
   }
   btn-dwnld {
       font-size: 1em;
       padding: 5px;
       margin: auto;
-      border-radius: 8px;
+      border-radius: 4px;
   }
   #noDesktop {
     display: block;
+  }
+  .phone-nav {
+    display: none;
   }
 
 }
@@ -443,6 +463,9 @@ h5 {
   #noMobile {
     display: none;
   }
+  .navbar-form {
+    display: none;
+  }
   h3 {
     margin-bottom: 0;
     font-size: 1em;
@@ -451,7 +474,7 @@ h5 {
     border-left: 3px solid #fff;
     border-bottom: 3px solid #fff;
     padding: 5px;
-    padding-left: 8px;
+    padding-left: 4px;
     border-radius: 2em;
   }
   .category {
@@ -473,6 +496,16 @@ h5 {
   #ipadOnly {
     display: none;
   }
+  #slide-out {
+    display: block;
+  }
+  .phone-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eeeeee;border-radius: 4px 4px 0 0;
+    background-color: #eee;
+    border: .25px #b6b6b6 solid;
+  }
   .tag-text a {
       font-size: 1em;
       text-transform: uppercase;
@@ -486,6 +519,6 @@ h5 {
     font-size: .75em;
     padding: 3px;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 4px;
   }
 }

@@ -58,10 +58,10 @@
     </div>
 
   <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role='button' data-slide-to="prev">
+        <a class="left carousel-control" href="#myCarousel" role='button' data-slide="prev">
             <img src="uploads/carousel/arrow_left.png" style='margin-top:140px' alt="Left Arrow">
         </a>
-        <a class="right carousel-control" href="#myCarousel" role='button' data-slide-to="next">
+        <a class="right carousel-control" href="#myCarousel" role='button' data-slide="next">
             <img src="uploads/carousel/arrow_right.png" style='margin-top:140px' alt="Right Arrow">
         </a>
 </div>

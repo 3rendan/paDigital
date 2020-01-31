@@ -214,7 +214,7 @@ $formAttributes['method'] = 'GET';
     </div>
     <?php if (!isset($buttonText)) $buttonText = __('Search for items'); ?>
     <?php if (isset($useSidebar) && $useSidebar): ?>
-    <div class="three columns omega">
+    <div class="three columns">
         <div id="save" class="panel">
             <input type="submit" class="submit big green button" name="submit_search" id="submit_search_advanced" value="<?php echo $buttonText; ?>">
         </div>

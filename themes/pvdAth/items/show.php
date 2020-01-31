@@ -16,11 +16,7 @@
   <div id='mobileLightbox' type='button'>
 
       <?php
-      echo link_to_item(
-          item_image('square_thumbnail', array(), 0, $item),
-          array(
-              'class' => 'kemba'),
-              'show', $item); ?>
+      echo link_to_item(item_image('square_thumbnail', array(), 0, $item), array('class' => 'kemba'),'show', $item); ?>
   </div>
         <!-- <div class="col-sm-7 tombstone"> -->
             <div class="col-sm-7">
@@ -29,6 +25,10 @@
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
                     <li class='nav-item' id='cpu'><a href="#resources" data-toggle="tab" class="nav-link">RESOURCES</a></li>
                 </ul>
+                <div class="phone-nav">
+                  <span><a href="#info" data-toggle="tab">INFO</a></span>
+                  <span><a href="#story" data-toggle="tab">STORY</a></span>
+                </div>
                 <div class="tab-content tombstone">
                     <div role="tabpane" class="tab-pane fade in active"  id='info'>
                         <table class="category">
@@ -203,7 +203,16 @@
     <?php echo link_to_next_item_show(); ?>
 </div>
 
+<script type="text/javascript">
+$(document).ready(function() {
+  // SideNav Button Initialization
+  $(".button-collapse").sideNav();
+    // SideNav Scrollbar Initialization
+    var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+    var ps = new PerfectScrollbar(sideNavScrollbar);
+});
 
+</script>
 
 
 <?php endif; ?>
