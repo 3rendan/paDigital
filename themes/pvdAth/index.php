@@ -4,66 +4,65 @@
 
 
 <!-- BEGIN CAROUSEL -->
-<div id="myCarousel" class="carousel slide" data-ride='carousel'>
-  <!-- Indicators -->
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    </ol> -->
-
-
+<div id="myCarousel" class="carousel slide">
 
   <!-- Carousel for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <a href="http://digital.provath.org/collections/show/2"><img src="/uploads/carousel/cPaintings.jpg" alt="Paintings" class="iconx">
-      <div class="carousel-caption" style="margin-bottom: 20px;">
-        <h4>Paintings</h4>
-      </div></a>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="/uploads/carousel/cPaintings.jpg" alt="Paintings" class="img-fluid d-block w-100 iconx">
+        <!-- <div class="carousel-caption" style="margin-bottom: 20px;">
+          <h4>Paintings</h4>
+        </div> -->
+      </div>
+      <!-- <div class="carousel-item fade">
+        <img src="/uploads/carousel/cSculpture.jpg" alt="Sculpture" class="img-fluid d-block w-100 iconx">
+        <div class="carousel-caption" style="margin-bottom: 20px;">
+          <h4>Sculpture</h4>
+        </div> -->
     </div>
-
-    <div class="item">
-      <a href="http://digital.provath.org/collections/show/1">
-      <img src="/uploads/carousel/cSculpture.jpg" alt="Sculpture" class="iconx">
-      <div class="carousel-caption" style="margin-bottom: 20px;">
-        <h4>Sculpture</h4>
-      </div></a>
     </div>
+  </div>
 
-    <div class="item">
+
+
+    <!-- <div class="carousel-item">
       <a href="http://digital.provath.org/collections/show/5">
-      <img src="/uploads/carousel/cPrints.jpg" alt="Prints" class="iconx">
+      <img src="/uploads/carousel/cPrints.jpg" alt="Prints" class="iconx d-block w-100">
       <div class="carousel-caption" style="margin-bottom: 20px;">
         <h4>Prints</h4>
       </div></a>
     </div>
 
-    <div class="item">
+
+    <div class="carousel-item">
         <a href="http://digital.provath.org/collections/show/3">
-        <img src="/uploads/carousel/cDrawings.jpg" alt="Drawings" class="iconx">
+        <img src="/uploads/carousel/cDrawings.jpg" alt="Drawings" class="iconx d-block w-100">
         <div class="carousel-caption" style="margin-bottom: 20px;">
           <h4>Drawings</h4>
         </div></a>
-      </div>
+    </div>
 
-    <div class="item">
+    <div class="carousel-item">
       <a href="http://digital.provath.org/collections/show/4">
-      <img src="/uploads/carousel/cDA.jpg" alt="Decorative Arts" class="iconx">
+      <img src="/uploads/carousel/cDA.jpg" alt="Decorative Arts" class="iconx d-block w-100">
       <div class="carousel-caption" style="margin-bottom: 20px;">
         <h4>Decorative Arts</h4>
       </div></a>
     </div>
+  </div>
+
 
   <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role='button' data-slide="prev">
-            <img src="uploads/carousel/arrow_left.png" style='margin-top:140px' alt="Left Arrow">
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role='button' data-slide="next">
-            <img src="uploads/carousel/arrow_right.png" style='margin-top:140px' alt="Right Arrow">
-        </a>
+  <!-- <a class="left carousel-control" href="#myCarousel" role='button' data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role='button' data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true">Next</span>
+    <span class="sr-only">Next</span>
+  </a> -->
+
 </div>
 
 

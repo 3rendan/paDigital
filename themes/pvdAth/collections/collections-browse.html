@@ -1,9 +1,9 @@
-<div class="container"> 
+<div class="container">
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
             <h3><?php
                 $pageTitle = __('Browse all collections');
-                echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));?></h3>   
+                echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));?></h3>
             </div>
         </div>
         <div class="flex-container">
@@ -13,9 +13,10 @@
                     echo "<div class=\"browse-items\">" . link_to_collection($collectionImage, array('class' => 'image')); ?>
                 <?php endif; ?>
             </div>
+
         </div>
     </div>
-                <?php echo pagination_links(); ?>        
+    <?php echo pagination_links(); ?>
 
 <?php fire_plugin_hook('public_collections_browse', array('collections'=> $collections, 'view' => $this)); ?>
 <?php echo foot(); ?>

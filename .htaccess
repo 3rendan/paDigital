@@ -1,6 +1,9 @@
 # Omeka .htaccess: Apache configuration file
 # This file is required for Omeka to function correctly.
 
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
 # --------------- #
 # Error Reporting #
 # --------------- #
@@ -10,7 +13,7 @@
 #
 # Note: This should only be enabled for development or debugging. Keep this
 # line commented for production sites.
-# 
+#
 SetEnv APPLICATION_ENV development
 
 # ------------- #

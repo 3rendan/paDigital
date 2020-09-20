@@ -33,6 +33,11 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
         </div>
     </div>
     <div class="tab-pane" id="browse-tags">
+      <!-- this is where the script can go -->
+      <script>
+        getTags();
+      </script>
+
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
         <?php echo "<div class=\"tag-text container\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>
 

@@ -25,10 +25,10 @@
                     <li class='nav-item'><a href="#story" data-toggle="tab" class="nav-link">STORY</a></li>
                     <li class='nav-item' id='cpu'><a href="#resources" data-toggle="tab" class="nav-link">RESOURCES</a></li>
                 </ul>
-                <div class="phone-nav">
+                <!-- <div class="phone-nav">
                   <span><a href="#info" data-toggle="tab">INFO</a></span>
                   <span><a href="#story" data-toggle="tab">STORY</a></span>
-                </div>
+                </div> -->
                 <div class="tab-content tombstone">
                     <div role="tabpane" class="tab-pane fade in active"  id='info'>
                         <table class="category">
@@ -54,11 +54,15 @@
                             if ($dimensions != '') {
                                 echo "<tr><td class='mtdt'>DIMENSIONS </><td>$dimensions</td></tDIMENSIONS>";
                             }
-                            $medium = metadata($item, array('Item Type Metadata', 'Original Format'));
+                            $original_format = metadata($item, array('Item Type Metadata', 'Original Format'));
+                            if ($original_format != '') {
+                              echo "<tr><td class='mtdt'>ORIGINAL FORMAT </td><td>$original_format</td></tr>";
+                            }
+                            $medium = metadata($item, array('Item Type Metadata', 'Medium'));
                             if ($medium != '') {
                                 echo "<tr><td class='mtdt'>MEDIUM </td><td>$medium</td></tr>";
                             }
-                            $pnote = metadata($item, array('Item Type Metadata', 'Medium'));
+                            $pnote = metadata($item, array('Item Type Metadata', 'Physical Note'));
                             if  ($pnote != '') {
                                 echo "<tr><td class='mtdt'>PHYSICAL NOTE </td><td>$pnote</td></tr>";
                             }
@@ -96,7 +100,6 @@
                             echo $date;
                         }
                         ?>
-                        <br>
                         <?php
                         $refNote = metadata('item', array('MODS', 'Citation/reference note(s)'));
                         if ($refNote != '') {

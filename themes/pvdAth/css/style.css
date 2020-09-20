@@ -45,6 +45,7 @@ h2 { /* for subheading of header */
     font-family: 'EB Garamond', serif;
 }
 
+
 h5 {
     font-size: 1.35em;
 }
@@ -287,7 +288,7 @@ h4 {
     margin-bottom: 0;
 }
 .browse-items {
-    margin: auto;
+  margin: auto;
 	padding: 5px;
 	width: 300px;
   border-top: solid #b6b6b6 1.25em;
