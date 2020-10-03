@@ -41,8 +41,7 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
         <?php
         $tag = tag_string(get_records('Tag', array(), 0));
-        $tags = array(explode(" ", $tag));
-        echo "<div class=\"tag-text container\">" . sort($tags) . "</div>"; ?>
+        echo "<div class=\"tag-text container\">" . $tag . "</div>"; ?>
 
     </div>
     <div class="tab-pane" id="browse-search">
