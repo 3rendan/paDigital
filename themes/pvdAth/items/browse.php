@@ -2,6 +2,8 @@
 $pageTitle = __('Browse items');
 echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
 ?>
+
+
 <div class="container">
     <div class="row col-sm-12">
         <h3 style="text-align:left"><?php echo $pageTitle;?> <small><?php echo __('(%s items total)', $total_results); ?></small></h3>
@@ -34,12 +36,13 @@ echo head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
     </div>
     <div class="tab-pane" id="browse-tags">
       <!-- this is where the script can go -->
-      <script>
-        getTags();
-      </script>
+
 
         <!-- <div class="row col-sm-offset-1 col-sm-10"> -->
-        <?php echo "<div class=\"tag-text container\">" . tag_string(get_records('Tag', array(), 0)) . "</div>"; ?>
+        <?php
+        $tag = tag_string(get_records('Tag', array(), 0));
+        $tags = array(explode(" ", $tag));
+        echo "<div class=\"tag-text container\">" . sort($tags) . "</div>"; ?>
 
     </div>
     <div class="tab-pane" id="browse-search">

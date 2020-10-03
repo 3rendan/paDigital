@@ -1,7 +1,8 @@
 
 const axios = require('axios');
+const app = require('express');
 const accessToken = '36f6015954d934153806239ed9aba0e6b7de1e51';
-const apiUrl = 'https://digital.provath.org/api/tags'
+
 $(()=> {
 
 $(`#lightbox`).click(function(e) {
@@ -20,15 +21,11 @@ $(`#closeModal`).click(function() {
   // e.preventDefault();
   $('#imageModal').dialog('close');
 });
-
-
-
-
-});
-
-
-const getTags = async () =>{
-  return await axios({
-    const result = await axios.get(`{apiUrl}`);
-  })
+function hello(){
+  console.log("hello");
 }
+function getTags() {
+    axios('http://digital.provath.org/api/tags')
+    .then(res => console.log(res.data))
+    .catch(error => console.error(error))
+  }
